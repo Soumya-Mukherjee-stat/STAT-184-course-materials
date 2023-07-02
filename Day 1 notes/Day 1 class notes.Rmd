@@ -1,0 +1,169 @@
+---
+title: "STAT 184: Introduction to R"
+author: 
+- "Instructor: Soumya Mukherjee"
+- "Content credit: Dr. Matthew Beckman and Olivia Beck"
+date: "July 3, 2023"
+
+output: 
+  slidy_presentation: default
+  html_notebook: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Objectives 
+
+- Quick introduction
+- Motivation of the course
+- Course Materials
+- Syllabus fly-over
+- Get R and RStudio Installed
+
+
+
+## Examples of data
+
+### Iris data
+
+- This famous (Fisher's or Anderson's) iris data set gives the measurements in centimeters of the variables sepal length and width and petal length and width, respectively, for 50 flowers from each of 3 species of iris. The species are Iris setosa, versicolor, and virginica.
+
+- This is a dataset that is directly available in R.
+
+- Randomly selected rows from the data:
+```{r, echo=FALSE}
+set.seed(0)
+iris[sample(1:nrow(iris),10),]
+```
+
+
+### Gapminder
+
+- Income & Life Expectancy:  
+    - <https://www.gapminder.org/tools/#$chart-type=bubbles&url=v1>  
+    - How many variables are being displayed here?
+    - What are they?
+    - What did you learn by watching the animation?
+- Dollar Street 
+    - <https://www.gapminder.org/dollar-street/matrix>
+    - Are we even looking at "data" here?
+
+
+### Medicare Spending
+
+- Newspaper article [here](http://www.nytimes.com/2013/05/08/business/hospital-billing-varies-wildly-us-data-shows.html)
+- Data available [here](http://www.cms.gov/Research-Statistics-Data-and-Systems/Statistics-Trends-and-Reports/Medicare-Provider-Charge-Data/index.html).
+
+
+## The logic of this course: Less volume, more creativity.
+
+- A minimal set of simple tools can be combined in powerful ways
+- Individually these tools are introduced as simple "data moves" 
+- The complexity of data use and presentation comes from combining these simple tools in order to achieve our specific purposes.
+
+Individual lego bricks are simple.^[Source : "Lego Color Bricks" by Alan Chia - Lego Color Bricks. Licensed under CC BY-SA 2.0 via [Wikimedia Commons](http://commons.wikimedia.org/wiki/File:Lego_Color_Bricks.jpg#mediaviewer/File:Lego_Color_Bricks.jpg)]  | A complex model made of lego bricks ^[Source: *Trafalgar Legoland 2003* by Kaihsu Tai - Kaihsu Tai. Licensed under CC BY-SA 3.0 via [Wikimedia Commons](http://commons.wikimedia.org/wiki/File:Trafalgar_Legoland_2003.jpg#mediaviewer/File:Trafalgar_Legoland_2003.jpg)]|
+----------------------------- | -----------------------------  |
+![Bricks](Lego_Color_Bricks.jpg)| ![Trafalgar Legoland](Trafalgar_Legoland_2003.jpg) |
+
+
+
+## The logic of this course: Less volume, more creativity.
+
+We will start with some infrastructure for these techniques:
+
+- basics of "tidy" data
+- commanding the computer to handle data and present the story we want to tell
+    - focus on "exploratory data analysis"
+    - we will combine graphs, numerical summaries, and narrative
+    - we defer to future STAT courses for formal "modeling"
+
+In coming weeks, we will study
+
+- relationships between data and graphical presentations
+- proper form of data to make a graphic (or a model) 
+- how to "wrangle" data we have into the form needed for a graphic (or a model)
+- use of layering to develop rich graphics 
+
+
+
+## Examples from many fields
+
+Some data sets we will access for examples.
+
+<pre>
+BabyNames                Names of children as recorded by the US Social
+                            Security Administration.
+CountryCentroids         Geographic location of countries
+CountryData              Many variables on countries from the 2014 CIA factbook.
+CountryGroups            Membership in Country Groups
+DirectRecoveryGroups     
+MedicareCharges          
+MedicareProviders        
+MigrationFlows           Human Migration between Countries
+Minneapolis2013          Ballots in the 2013 Mayoral election in Minneapolis
+NCI60                    Gene expression in cancer.
+NCI60cells               Cell Line descriptions in the NCI-60 dataset
+WorldCities              Cities and their populations
+ZipDemography            Demographic information for most US ZIP Codes (Postal Codes)
+ZipGeography             Geographic information by US Zip Codes (Postal Codes)
+registeredVoters         A sample of the voter registration list for Wake County, 
+                            North Carolina in Fall 2010.
+</pre>
+
+
+
+## Exploratory data analysis (EDA)
+
+Due to the nature of the course and our goals, we will sometimes characterize our work from the paradigm of *Exploratory data analysis (EDA)*.  Some goals for high-quality EDA include:
+
+- Become acquainted with the data 
+- Explore intuition for research question 
+- Discover features in the data that impact modeling decisions 
+
+
+
+## Orientation to Class Resources
+
+- Lots of essential stuff launches from Canvas directly
+    - Textbook (Data Computing eBook)
+    - Canvas Discussions
+    - RStudio Cloud
+
+- R and RStudio 
+    - **R** does the computations
+    - **RStudio** is an interface to R that makes it easier to document your work, access nice features of R, and more
+    - **Rstudio Cloud** is a cloud based platform that allows you to run RStudio on your browser
+
+- git and GitHub
+    - **git** is version control software used to facilitate collaboration and project evolution
+    - **GitHub** is a remote git repository hosting service
+
+- Access to R & RStudio (It is important that you do these ASAP)
+    - Installing on your own computer.  You need both of these:
+        - [R software](http://cran.rstudio.com/)
+        - [RStudio desktop software](http://www.rstudio.com/products/rstudio/download/preview/).
+        - Packages: Paste the following R commands into your RStudio Console and run it (press Enter):
+    - RStudio Cloud: [https://posit.cloud/](https://posit.cloud/)
+        - Choose **Sign up**
+        - Choose the Free plan
+        - Sign up using your psu email ID, set a password and enter your first and last name
+        - Pro: Access all your R and RStudio stuff from any computer anywhere
+        - Con: Takes some practice to get used to uploading files to & exporting files from the cloud interface. Also, memory allocations                  are limited and difficult to work with large data sets here.
+        
+- R Packages / Libraries: these are software modules that extend the functionality of R.  
+    - We need to **install** the package just once to *download* it on your computer.  
+    - We need to load the package/library to *use* it each time we start a new R session 
+    
+- All of my course notes/slides are posted on Canvas (under modules) and GitHub: <>
+
+## Assignments and Questions
+
+- Assignments, grades, etc will be handled with Canvas  
+- Use Canvas Discussions for most questions about course content, e.g. "How do I rename a variable?"; see syllabus for detail
+    - I'll redirect you to post things on Canvas Discussions when other students would benefit from the question and the answer
+    - Email is generally for private issues that aren't relevant to other students
+
+
+
