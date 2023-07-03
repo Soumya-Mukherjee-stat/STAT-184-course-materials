@@ -20,6 +20,7 @@ knitr::opts_chunk$set(echo = FALSE)
 - Course Materials
 - Syllabus fly-over
 - Get R and RStudio Installed
+- Assignment before next lecture on July 5, Wednesday
 
 
 
@@ -155,7 +156,7 @@ Due to the nature of the course and our goals, we will sometimes characterize ou
     - We need to **install** the package just once to *download* it on your computer.  
     - We need to load the package/library to *use* it each time we start a new R session 
     
-- All of my course notes/slides are posted on Canvas (under modules) and GitHub: <>
+- All of my course notes/slides are posted on Canvas (under modules) and GitHub: <https://github.com/Soumya-Mukherjee-stat/STAT-184-course-materials/tree/main/Day%201%20notes>
 
 ## Assignments and Questions
 
@@ -163,6 +164,11 @@ Due to the nature of the course and our goals, we will sometimes characterize ou
 - Use Canvas Discussions for most questions about course content, e.g. "How do I rename a variable?"; see syllabus for detail
     - I'll redirect you to post things on Canvas Discussions when other students would benefit from the question and the answer
     - Email is generally for private issues that aren't relevant to other students
+    
+## Assignments before next lecture on July 5
+
+- DataCamp Assignment at <https://app.datacamp.com/learn/courses/free-introduction-to-r>. (See Canvas page for detailed instructions). This is supposed to get you acquainted with the very basic operations in R.
+- Read Chapters 1 and 2 from the Data Computing ebook available at <https://dtkaplan.github.io/DataComputingEbook/> and complete the Reading Quiz based on that. You should be able to answer if you just carefully read the text. 
 
 
 
