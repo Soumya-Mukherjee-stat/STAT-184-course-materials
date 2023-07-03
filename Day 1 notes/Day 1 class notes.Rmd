@@ -1,11 +1,10 @@
 ---
-title: "STAT 184: Introduction to R"
-author: 
-- "Instructor: Soumya Mukherjee"
-- "Content credit: Dr. Matthew Beckman and Olivia Beck"
+title: 'STAT 184: Introduction to R'
+author:
+- 'Instructor: Soumya Mukherjee'
+- 'Content credit: Dr. Matthew Beckman and Olivia Beck'
 date: "July 3, 2023"
-
-output: 
+output:
   slidy_presentation: default
   html_notebook: default
 ---
