@@ -44,7 +44,16 @@ git config
 ```
   - For additional support corresponding to various operating systems see         <https://happygitwithr.com/install-git.html>.
 - We will be using `git` almost entirely within RStudio.
+- Once Git is installed, the first thing to do is set your name and the email address associated with your GitHub profile. This is information is used to synchronize the work on your computer with your Repo on the GitHub remote server.
 
+Again, you will need a Terminal window in RStudio (RStudio >> Tools >> Terminal >> New Terminal) and then enter the following commands–one at a time–after the dollar sign prompt ($) as shown below.
+```{r eval=F}
+git config --global user.name 'First Last'
+git config --global user.email 'abc1234@psu.edu'
+git config --global --list
+```
+- Cloning a particular GitHub repository to the local computer using RStudio (Instructions in Section 3.2.3 of <https://smac-group.github.io/ds/github.html> will be helpful).
+- Basic workflow of working in RStudio and saving progress to GitHub (Section 3,2.4 of <https://smac-group.github.io/ds/github.html>).
 
 ## RStudio Tour
 
