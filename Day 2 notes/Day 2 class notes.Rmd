@@ -20,7 +20,7 @@ output:
 install.packages("devtools")
 library(devtools)
 devtools::install_github("DataComputing/DataComputing")
-install.packages(c("tidyverse","knitr","rmarkdown","rpart","shiny","manipulate"))
+install.packages(c("usethis","tidyverse","knitr","rmarkdown","rpart","shiny","manipulate"))
 install.packages(c("mosaic","mosaicData","NHANES"))
 ```
 ## Git & GitHub setup
@@ -124,6 +124,5 @@ Here's part of a page from his lab notebook. Things to think abou here:
 ## Assignment before next lecture tomorrow (July 6)
 
 - Tidy Data assignment using the Galton/HeightMeasurement dataset
-- DC Ebook Exercises from Chapter 1
 - GitHub Profile creation (ungraded) 
 
