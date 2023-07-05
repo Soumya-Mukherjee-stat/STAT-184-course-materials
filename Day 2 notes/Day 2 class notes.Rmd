@@ -52,6 +52,7 @@ git config --global user.name 'First Last'
 git config --global user.email 'abc1234@psu.edu'
 git config --global --list
 ```
+- You will also need to set up something called a PAT (following instructions at <https://happygitwithr.com/https-pat.html>), but I will be going over this in the video.
 - Cloning a particular GitHub repository to the local computer using RStudio (Instructions in Section 3.2.3 of <https://smac-group.github.io/ds/github.html> will be helpful).
 - Basic workflow of working in RStudio and saving progress to GitHub (Section 3,2.4 of <https://smac-group.github.io/ds/github.html>).
 
