@@ -12,9 +12,9 @@
 <meta name="author" content="Instructor: Soumya Mukherjee" />
 <meta name="author" content="Content credit: Dr. Matthew Beckman and Olivia Beck" />
 
-<meta name="date" content="2023-07-06" />
+<meta name="date" content="2023-07-07" />
 
-<title>Basic Operations in R</title>
+<title>Day 4</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -1749,465 +1749,144 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">Basic Operations in R</h1>
+<h1 class="title toc-ignore">Day 4</h1>
 <h4 class="author">Instructor: Soumya Mukherjee</h4>
 <h4 class="author">Content credit: Dr. Matthew Beckman and Olivia
 Beck</h4>
-<h4 class="date">July 6, 2023</h4>
+<h4 class="date">July 7, 2023</h4>
 
 </div>
 
 
 <!-- rnb-text-begin -->
-<div id="r-programming-basics" class="section level2">
-<h2>R Programming Basics</h2>
-<p>To run a line within a chunk bring the prompt/cursor at the beginning
-of the line and press “Ctrl + enter” on a Windows machine or press “Cmnd
-+ return” on a Mac. To run the whole chunk, just press the green play
-button at the top of each chunk.</p>
-</div>
-<div id="the-basics" class="section level2">
-<h2>The Basics</h2>
+<div id="packages-tidyverse" class="section level2">
+<h2>Packages + Tidyverse</h2>
 <ul>
-<li>R works just like a calculator</li>
+<li>You only need to install a package once (on every machine you’re
+on)</li>
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuNSArIDJcbjEwICogKDIgLSA5KVxuM14yIC8gOVxuYGBgIn0= -->
-<pre class="r"><code>5 + 2
-10 * (2 - 9)
-3^2 / 9</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<ul>
-<li>It can perform logical operations as well</li>
-</ul>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuNCA+IDNcbjYzIDwgMjVcbjk0ID09IDQ1XG5gYGAifQ== -->
-<pre class="r"><code>4 &gt; 3
-63 &lt; 25
-94 == 45</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-</div>
-<div id="use-to-sequential-list" class="section level2">
-<h2>Use : to sequential list</h2>
-<ul>
-<li>list all numbers from 1 to 10</li>
-</ul>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuMToxMFxuYGBgIn0= -->
-<pre class="r"><code>1:10</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<ul>
-<li>list all numbers from 10 to 1</li>
-</ul>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuMTA6MVxuYGBgIn0= -->
-<pre class="r"><code>10:1</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<ul>
-<li>arithmetic progression from 2 to 10 in steps of 2</li>
-</ul>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2VxKGZyb20gPSAyLHRvID0gMTAsYnkgPSAyKVxuYGBgIn0= -->
-<pre class="r"><code>seq(from = 2,to = 10,by = 2)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<ul>
-<li>Use ” ” or ’ ’ for strings</li>
-</ul>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXCJIZWxsbyBXb3JsZFwiXG4nVGhpcyBpcyBhbHNvIGEgc3RyaW5nJ1xuXCIxLCAyLCAzXCIgI3RoaXMgaXMgYSBzdHJpbmcsIE5PVCBhIHZlY3RvciBcbmBgYCJ9 -->
-<pre class="r"><code>&quot;Hello World&quot;
-&#39;This is also a string&#39;
-&quot;1, 2, 3&quot; #this is a string, NOT a vector </code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<ul>
-<li>To write a vector of items we use c()</li>
-</ul>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYygxLCAyLCAzKVxuYGBgIn0= -->
-<pre class="r"><code>c(1, 2, 3)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<ul>
-<li>we can also put strings in vectors</li>
-</ul>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYyhcIkFcIiwgXCJCXCIsIFwiQ1wiKVxuYGBgIn0= -->
-<pre class="r"><code>c(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYygxLFwiQVwiLDMpXG5gYGAifQ== -->
-<pre class="r"><code>c(1,&quot;A&quot;,3)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<ul>
-<li>R has some basic functions already loaded in</li>
-</ul>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWVhbihjKDEsIDIsIDMsIDQsIDUpKSAjbWVhbiBvZiAxLCAyLCAzLCA0LCA1XG5mYWN0b3JpYWwoNCkgIyBjYWxjdWxhdGUgNCFcbnJub3JtKG4gPSAxMCwgbWVhbiA9IDUsIHNkID0gMikgI2dlbmVyYXRlIDEwIG5vcm1hbCByYW5kb20gdmFyaWFibGVzIHdpdGggbWVhbiA1IGFuZCBzdGFuZGFyZCBkZXZpYXRpb24gMlxuYGBgIn0= -->
-<pre class="r"><code>mean(c(1, 2, 3, 4, 5)) #mean of 1, 2, 3, 4, 5
-factorial(4) # calculate 4!
-rnorm(n = 10, mean = 5, sd = 2) #generate 10 normal random variables with mean 5 and standard deviation 2</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<ul>
-<li>Whenever we want more information about a function we type -
-?function_name . This will prompt the help files to pop up in the bottom
-right pane of RStudio. Help files provide information about what the
-function does, the arguments is takes in, and examples. We can directly
-search in the help pane as well.</li>
-</ul>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuP21lYW5cbj9ybm9ybVxuP2NcbmBgYCJ9 -->
-<pre class="r"><code>?mean
-?rnorm
-?c</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-</div>
-<div id="assignment-operator" class="section level2">
-<h2>Assignment operator</h2>
-<ul>
-<li>in R we use &lt;- (assign) to assign variable and function
-values</li>
-<li>we use = (equals) inside functions to give arguments values</li>
-</ul>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXkubnVtYmVyIDwtIDFcbmRpY2UgPC0gMTo2XG5yYW5kb20ubnVtYmVycyA8LSBybm9ybSgxMCwgbWVhbiA9IDUsIHNkID0gMilcbmBgYCJ9 -->
-<pre class="r"><code>my.number &lt;- 1
-dice &lt;- 1:6
-random.numbers &lt;- rnorm(10, mean = 5, sd = 2)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>##Indexing</p>
-<ul>
-<li>WARNING: R starts indexing a 1 (most other coding languages start
-indexing at 0)</li>
-<li>In R we use [ ] to reference items at an index in a vector</li>
-</ul>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXkudmVjdG9yIDwtIDEwOjE1XG5teS52ZWN0b3JbNV0gIyBnZXQgdGhlIDFzdCBlbGVtZW50IGluIG15LnZlY3RvclxubXkudmVjdG9yW2MoMSw2KV0gIyBnZXQgdGhlIDJuZCwgM3JkLCA0dGggZWxlbWVudHMgaW4gbXkudmVjdG9yXG5gYGAifQ== -->
-<pre class="r"><code>my.vector &lt;- 10:15
-my.vector[5] # get the 1st element in my.vector
-my.vector[c(1,6)] # get the 2nd, 3rd, 4th elements in my.vector</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<ul>
-<li>Be careful that you do not try to index something that does not
-exist</li>
-</ul>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXkudmVjdG9yWzddICMgdGhpcyB3aWxsIHNheSBOQSBiZWNhdXNlIHRoZXJlIGlzIG5vdGhpbmcgaW4gdGhlIDd0aCBlbGVtZW50IG9mIG15LnZlY3RvclxuYGBgIn0= -->
-<pre class="r"><code>my.vector[7] # this will say NA because there is nothing in the 7th element of my.vector</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<ul>
-<li>We can use the “-” sign to indicate we want all elements “except”
-the ones listed</li>
-</ul>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBvdXRwdXQgYWxsIGVsZW1lbnRzIGV4Y2VwdCB0aGUgZmlyc3Qgb25lIFxubXkudmVjdG9yWyAtMSBdXG5cbiNvdXRwdXQgYWxsIGVsZW1lbnRzIGV4Y2VwdCB0aGUgdGhlIGZpcnN0IGFuZCB0aGlyZCBvbmVzIFxubXkudmVjdG9yWyAtYygxLCAzKSBdXG5gYGAifQ== -->
-<pre class="r"><code># output all elements except the first one 
-my.vector[ -1 ]
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaW5zdGFsbC5wYWNrYWdlcyhcInRpZHl2ZXJzZVwiKVxuXG4jIyBldmVyeSB0aW1lIHlvdSB3YW50IHRvIHVzZSBhIGZ1bmN0aW9uIGluc2lkZSBhIHBhY2thZ2UsIHlvdSBuZWVkIHRvIGxvYWQgdGhlIGxpYnJhcnlcbmxpYnJhcnkodGlkeXZlcnNlKSAjbm93IHdlIGNhbiB1c2UgdGhlIHRpZHl2ZXJzZSBmdW5jdGlvbnMhIFxuYGBgIn0= -->
+<pre class="r"><code>install.packages(&quot;tidyverse&quot;)
 
-#output all elements except the the first and third ones 
-my.vector[ -c(1, 3) ]</code></pre>
+## every time you want to use a function inside a package, you need to load the library
+library(tidyverse) #now we can use the tidyverse functions! </code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ul>
-<li>To create a matrix, we use the matrix function</li>
-</ul>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXkubWF0cml4IDwtIG1hdHJpeCgxOjEwLCBucm93ID0gMiwgbmNvbD01LCBieXJvdyA9IFRSVUUpXG5teS5tYXRyaXhcbmBgYCJ9 -->
-<pre class="r"><code>my.matrix &lt;- matrix(1:10, nrow = 2, ncol=5, byrow = TRUE)
-my.matrix</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<ul>
-<li>When indexing matrices, the format is [row_number,
-column_number]</li>
-</ul>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXkubWF0cml4WzEsIDJdXG5gYGAifQ== -->
-<pre class="r"><code>my.matrix[1, 2]</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<ul>
-<li>If we leave the row_number blank, it will output every element in
-that column</li>
-</ul>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXkubWF0cml4WyAsIDVdICNvdXRwdXRzIGFsbCBudW1iZXIgaW4gY29sdW1uIDVcbmBgYCJ9 -->
-<pre class="r"><code>my.matrix[ , 5] #outputs all number in column 5</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<ul>
-<li>Similar for rows</li>
-</ul>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXkubWF0cml4WzIsIF0gI291dHB1dHMgYWxsIG51bWJlciBpbiByb3cgMVxuYGBgIn0= -->
-<pre class="r"><code>my.matrix[2, ] #outputs all number in row 1</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-</div>
-<div id="checking-object-types-in-r" class="section level2">
-<h2>Checking object types in R</h2>
-<ul>
-<li>You can check the object type in r using the function
-<code>class()</code>.</li>
-</ul>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3MoNClcbmNsYXNzKFwiY2hhclwiKVxuY2xhc3MoYyhcImFcIixcImJcIixcImNcIikpXG5jbGFzcyhtYXRyaXgoMTo2LG5yb3c9MyxieXJvdz1UKSlcbmBgYCJ9 -->
-<pre class="r"><code>class(4)
-class(&quot;char&quot;)
-class(c(&quot;a&quot;,&quot;b&quot;,&quot;c&quot;))
-class(matrix(1:6,nrow=3,byrow=T))</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-</div>
-<div id="vectorization" class="section level2">
-<h2>Vectorization</h2>
-<ul>
-<li>Unlike most other coding languages, R is vectorized. What does this
-mean??? The default for R is to do component wise operations and not
-traditional matrix multiplication.</li>
-<li>In R, we can multiply a constant by a vector. This works just like
-traditional mathematics would</li>
-</ul>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueCA8LSBjKDEsIDIsIDMpXG4yICogeCAjID0gYygyLCA0LCA2KVxuYGBgIn0= -->
-<pre class="r"><code>x &lt;- c(1, 2, 3)
-2 * x # = c(2, 4, 6)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<ul>
-<li>However, that is where the similarities between R and traditional
-mathematics end. In traditional mathematics if I multiply [ 2 4 6] * [5,
-10, 15] i would get [ 2 4 6] * [5, 10, 15] = (2 * 5) + (4 * 10) + (6 *
-15) = 140</li>
-<li>This is not what happen in R</li>
-</ul>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudjEgPC0gYygyLCA0LCA2KVxudjIgPC0gYyg1LCAxMCwgMTUpIFxuXG52MSAqIHYyICNvdXRwdXRzIGMoMTAsIDQwLCA5MCkuIFRoaXMgaXMgbm90IDE0MC4gV2hhdCBoYXBwZW5lZD8gXG5gYGAifQ== -->
-<pre class="r"><code>v1 &lt;- c(2, 4, 6)
-v2 &lt;- c(5, 10, 15) 
-
-v1 * v2 #outputs c(10, 40, 90). This is not 140. What happened? </code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<ul>
-<li>R did element wise computations. R saw that you have 2 vectors, each
-of length 3. It multiplied the first element in v1 and the first element
-in v2, then multiplied the second element in v1 and the second element
-in v2, then multiplied the third element in v1 and the third element in
-v2, and outputs one vector of length 3.</li>
-<li>Similar things happen for +, -, /, and ^</li>
-</ul>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudjEgKyB2MlxudjEgLSB2MlxudjEgLyB2MlxudjJedjFcbmBgYCJ9 -->
-<pre class="r"><code>v1 + v2
-v1 - v2
-v1 / v2
-v2^v1</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<ul>
-<li>If we want to do traditional matrix multiplication, we use
-<code>%*%</code>. The output will be a matrix, not a vector</li>
-</ul>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudjEgJSolIHYyICMgPSAxNDBcbmBgYCJ9 -->
-<pre class="r"><code>v1 %*% v2 # = 140</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<ul>
-<li>Note, if we ever want to calculate the inverse of a matrix, we use
-solve()</li>
-</ul>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWF0IDwtIG1hdHJpeChjKDEsMiwzLDQpLCBucm93ID0gMiwgbmNvbCA9IDIpXG5cbj9zb2x2ZVxuc29sdmUobWF0KSAjaW52ZXJzZSBvZiBtYXRcblxubWF0ICUqJSBzb2x2ZShtYXQpICMgaWRlbnRpdHkgbWF0cml4XG5gYGAifQ== -->
-<pre class="r"><code>mat &lt;- matrix(c(1,2,3,4), nrow = 2, ncol = 2)
-
-?solve
-solve(mat) #inverse of mat
-
-mat %*% solve(mat) # identity matrix</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-</div>
-<div id="data-frames" class="section level2">
-<h2>Data Frames</h2>
-<ul>
-<li>R stores data in objects called data frames</li>
-<li>Lets create a data frame with 2 columns, Age (in years) and Height
-(in cm)</li>
-</ul>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXkuZGF0YSA8LSBkYXRhLmZyYW1lKCBcIkFnZVwiID0gYygyMywgMTIsIDkwLCA0MSwgODcpLCBcbiAgICAgICAgICAgICAgICAgICAgICAgXCJIZWlnaHRcIiA9IGMoMTYyLjMsIDEyMS4wLCAxNzQuOCwgMTg1LjIsIDE2OC45KSlcblxuIyBUaGlzIHdpbGwgZGlzcGxheSB5b3VyIGRhdGEgZnJhbWUgaW4gdGhlIGNvbnNvbGVcbm15LmRhdGFcbmBgYCJ9 -->
-<pre class="r"><code>my.data &lt;- data.frame( &quot;Age&quot; = c(23, 12, 90, 41, 87), 
-                       &quot;Height&quot; = c(162.3, 121.0, 174.8, 185.2, 168.9))
-
-# This will display your data frame in the console
-my.data</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<ul>
-<li>This is will display your data in a new window</li>
-</ul>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVmlldyhteS5kYXRhKVxuYGBgIn0= -->
-<pre class="r"><code>View(my.data)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<ul>
-<li>Equivalently, you can also click on the “my.data” row in the
-Environment pane</li>
-<li>We can reference the information in “Age” column in a few different
-ways. All of the following are equivalent</li>
-</ul>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXkuZGF0YVsgLCAxXVxubXkuZGF0YVsgLCBcIkFnZVwiXVxubXkuZGF0YSRBZ2VcbmBgYCJ9 -->
-<pre class="r"><code>my.data[ , 1]
-my.data[ , &quot;Age&quot;]
-my.data$Age</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- ## Packages + Tidyverse -->
-<!-- - You only need to install a package once (on every machine you're on) -->
-<!-- ```{r} -->
-<!-- install.packages("tidyverse") -->
-<!-- ## every time you want to use a function inside a package, you need to load the library -->
-<!-- library(tidyverse) #now we can use the tidyverse functions!  -->
-<!-- ``` -->
-<!-- - Before we get into functions in the tidyverse, we will introduce one more special operator in R -->
-<!-- - The tidyverse package contains the `%>%`  (pipe) operator  -->
-<!-- - Pipe takes what ever is before the `%>%` and inputs as the first element into whatever is after the `%>%`. -->
-<!-- ## An example using the mean function -->
-<!-- ```{r} -->
-<!-- ?mean  -->
-<!-- numbers <- c(1,5,6,8,23,45,67) -->
-<!-- ``` -->
-<!-- -The following are equivalent  -->
-<!-- - Method 1  -->
-<!-- ```{r} -->
-<!-- mean(numbers) -->
-<!-- ``` -->
-<!-- - Method 2 -->
-<!-- ```{r} -->
-<!-- numbers %>% -->
-<!--   mean() -->
-<!-- ``` -->
-<!-- - Pipe is usually used when we have a series of operations we want to compute -->
-<!-- - Lets use the iris data set as an example  -->
-<!-- ```{r} -->
-<!-- iris -->
-<!-- ``` -->
-<!-- - Say I want to arrange the rows in this data set by the Sepal.Length.  -->
-<!-- - The following are equivalent -->
-<!-- - Method 1 -->
-<!-- ```{r} -->
-<!-- arrange(iris, Sepal.Length) -->
-<!-- ``` -->
-<!-- - Method 2 -->
-<!-- ```{r} -->
-<!-- iris %>% -->
-<!--   arrange(Sepal.Length) -->
-<!-- ``` -->
-<!-- - But now say we only want to keep rows with Sepal.Width > 3 AND arrange the table by Sepal.Length -->
-<!-- - The following are equivalent  -->
-<!-- - Method 1 -->
-<!-- ```{r} -->
-<!-- temp1 <- arrange(iris, Sepal.Length) -->
-<!-- result <- filter(temp1, Sepal.Width > 3) -->
-<!-- result  -->
-<!-- ``` -->
-<!-- - Method 2 -->
-<!-- ```{r} -->
-<!-- iris %>% -->
-<!--   arrange(Sepal.Length) %>% -->
-<!--   filter(Sepal.Width > 3) -->
-<!-- ``` -->
-<!-- - Both methods technically work, but method 2 is must easier to read and took a lot less typing!  -->
-<!-- - (advanced) Method 2 takes up significantly less memory on your machine than Method 1. This is one of the primary reasons we use %>% -->
-</div>
-<div id="additional-resources" class="section level2">
-<h2>Additional resources</h2>
-<ul>
-<li>Learning base R operations (<a href="https://www.w3schools.com/r/" class="uri">https://www.w3schools.com/r/</a>).</li>
-<li>Learning tidyverse (specifically dplyr) operations (<a href="https://dplyr.tidyverse.org/articles/dplyr.html" class="uri">https://dplyr.tidyverse.org/articles/dplyr.html</a>).</li>
+<li>Before we get into functions in the tidyverse, we will introduce one
+more special operator in R</li>
+<li>The tidyverse package contains the <code>%&gt;%</code> (pipe)
+operator</li>
+<li>Pipe takes what ever is before the <code>%&gt;%</code> and inputs as
+the first element into whatever is after the <code>%&gt;%</code>.</li>
 </ul>
 </div>
-<div id="assignments-before-next-lecture-july-7" class="section level2">
-<h2>Assignments before next lecture (July 7)</h2>
+<div id="an-example-using-the-mean-function" class="section level2">
+<h2>An example using the mean function</h2>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuP21lYW4gXG5udW1iZXJzIDwtIGMoMSw1LDYsOCwyMyw0NSw2NylcbmBgYCJ9 -->
+<pre class="r"><code>?mean 
+numbers &lt;- c(1,5,6,8,23,45,67)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>-The following are equivalent - Method 1</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWVhbihudW1iZXJzKVxuYGBgIn0= -->
+<pre class="r"><code>mean(numbers)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 <ul>
-<li>Tidy Data Assignment (due date extended to tomorrow 9:59 am)</li>
-<li>DataComputing Ebook Chapter 1 Exercises (1.1, 1.2,1.3 and 1.5)</li>
-<li>Reading Quiz based on DataComputing Ebook Chapter 3 and 4</li>
+<li>Method 2</li>
+</ul>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubnVtYmVycyAlPiVcbiAgbWVhbigpXG5gYGAifQ== -->
+<pre class="r"><code>numbers %&gt;%
+  mean()</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<ul>
+<li>Pipe is usually used when we have a series of operations we want to
+compute</li>
+<li>Lets use the iris data set as an example</li>
+</ul>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaXJpc1xuYGBgIn0= -->
+<pre class="r"><code>iris</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<ul>
+<li>Say I want to arrange the rows in this data set by the
+Sepal.Length.</li>
+<li>The following are equivalent</li>
+<li>Method 1</li>
+</ul>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXJyYW5nZShpcmlzLCBTZXBhbC5MZW5ndGgpXG5gYGAifQ== -->
+<pre class="r"><code>arrange(iris, Sepal.Length)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<ul>
+<li>Method 2</li>
+</ul>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaXJpcyAlPiVcbiAgYXJyYW5nZShTZXBhbC5MZW5ndGgpXG5gYGAifQ== -->
+<pre class="r"><code>iris %&gt;%
+  arrange(Sepal.Length)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<ul>
+<li>But now say we only want to keep rows with Sepal.Width &gt; 3 AND
+arrange the table by Sepal.Length</li>
+<li>The following are equivalent</li>
+<li>Method 1</li>
+</ul>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGVtcDEgPC0gYXJyYW5nZShpcmlzLCBTZXBhbC5MZW5ndGgpXG5yZXN1bHQgPC0gZmlsdGVyKHRlbXAxLCBTZXBhbC5XaWR0aCA+IDMpXG5yZXN1bHQgXG5gYGAifQ== -->
+<pre class="r"><code>temp1 &lt;- arrange(iris, Sepal.Length)
+result &lt;- filter(temp1, Sepal.Width &gt; 3)
+result </code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<ul>
+<li>Method 2</li>
+</ul>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaXJpcyAlPiVcbiAgYXJyYW5nZShTZXBhbC5MZW5ndGgpICU+JVxuICBmaWx0ZXIoU2VwYWwuV2lkdGggPiAzKVxuYGBgIn0= -->
+<pre class="r"><code>iris %&gt;%
+  arrange(Sepal.Length) %&gt;%
+  filter(Sepal.Width &gt; 3)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<ul>
+<li>Both methods technically work, but method 2 is must easier to read
+and took a lot less typing!</li>
+<li>(advanced) Method 2 takes up significantly less memory on your
+machine than Method 1. This is one of the primary reasons we use
+%&gt;%</li>
 </ul>
 <!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIkJhc2ljIE9wZXJhdGlvbnMgaW4gUiINCmF1dGhvcjoNCi0gJ0luc3RydWN0b3I6IFNvdW15YSBNdWtoZXJqZWUnDQotICdDb250ZW50IGNyZWRpdDogRHIuIE1hdHRoZXcgQmVja21hbiBhbmQgT2xpdmlhIEJlY2snDQpkYXRlOiAiSnVseSA2LCAyMDIzIg0Kb3V0cHV0Og0KICBzbGlkeV9wcmVzZW50YXRpb246IGRlZmF1bHQNCiAgaHRtbF9ub3RlYm9vazogZGVmYXVsdA0KLS0tDQoNCiMjIFIgUHJvZ3JhbW1pbmcgQmFzaWNzDQoNClRvIHJ1biBhIGxpbmUgd2l0aGluIGEgY2h1bmsgYnJpbmcgdGhlIHByb21wdC9jdXJzb3IgYXQgdGhlIGJlZ2lubmluZyBvZiB0aGUgbGluZSBhbmQgcHJlc3MgIkN0cmwgKyBlbnRlciIgb24gYSBXaW5kb3dzIG1hY2hpbmUgb3IgcHJlc3MgIkNtbmQgKyByZXR1cm4iIG9uIGEgTWFjLiBUbyBydW4gdGhlIHdob2xlIGNodW5rLCBqdXN0IHByZXNzIHRoZSBncmVlbiBwbGF5IGJ1dHRvbiBhdCB0aGUgdG9wIG9mIGVhY2ggY2h1bmsuDQoNCiMjIFRoZSBCYXNpY3MNCg0KLSBSIHdvcmtzIGp1c3QgbGlrZSBhIGNhbGN1bGF0b3IgDQpgYGB7cn0NCjUgKyAyDQoxMCAqICgyIC0gOSkNCjNeMiAvIDkNCmBgYA0KLSBJdCBjYW4gcGVyZm9ybSBsb2dpY2FsIG9wZXJhdGlvbnMgYXMgd2VsbA0KDQpgYGB7cn0NCjQgPiAzDQo2MyA8IDI1DQo5NCA9PSA0NQ0KYGBgDQojIyBVc2UgOiB0byBzZXF1ZW50aWFsIGxpc3QgDQotIGxpc3QgYWxsIG51bWJlcnMgZnJvbSAxIHRvIDEwIA0KYGBge3J9DQoxOjEwDQpgYGANCg0KLSBsaXN0IGFsbCBudW1iZXJzIGZyb20gMTAgdG8gMQ0KYGBge3J9DQoxMDoxDQpgYGANCg0KLSBhcml0aG1ldGljIHByb2dyZXNzaW9uIGZyb20gMiB0byAxMCBpbiBzdGVwcyBvZiAyDQpgYGB7cn0NCnNlcShmcm9tID0gMix0byA9IDEwLGJ5ID0gMikNCmBgYA0KDQotIFVzZSAiICIgb3IgJyAnIGZvciBzdHJpbmdzDQpgYGB7cn0NCiJIZWxsbyBXb3JsZCINCidUaGlzIGlzIGFsc28gYSBzdHJpbmcnDQoiMSwgMiwgMyIgI3RoaXMgaXMgYSBzdHJpbmcsIE5PVCBhIHZlY3RvciANCmBgYA0KDQotIFRvIHdyaXRlIGEgdmVjdG9yIG9mIGl0ZW1zIHdlIHVzZSBjKCkNCmBgYHtyfQ0KYygxLCAyLCAzKQ0KYGBgDQoNCi0gd2UgY2FuIGFsc28gcHV0IHN0cmluZ3MgaW4gdmVjdG9ycyANCmBgYHtyfQ0KYygiQSIsICJCIiwgIkMiKQ0KYGBgDQpgYGB7cn0NCmMoMSwiQSIsMykNCmBgYA0KDQotIFIgaGFzIHNvbWUgYmFzaWMgZnVuY3Rpb25zIGFscmVhZHkgbG9hZGVkIGluIA0KYGBge3J9DQptZWFuKGMoMSwgMiwgMywgNCwgNSkpICNtZWFuIG9mIDEsIDIsIDMsIDQsIDUNCmZhY3RvcmlhbCg0KSAjIGNhbGN1bGF0ZSA0IQ0Kcm5vcm0obiA9IDEwLCBtZWFuID0gNSwgc2QgPSAyKSAjZ2VuZXJhdGUgMTAgbm9ybWFsIHJhbmRvbSB2YXJpYWJsZXMgd2l0aCBtZWFuIDUgYW5kIHN0YW5kYXJkIGRldmlhdGlvbiAyDQpgYGANCg0KLSBXaGVuZXZlciB3ZSB3YW50IG1vcmUgaW5mb3JtYXRpb24gYWJvdXQgYSBmdW5jdGlvbiB3ZSB0eXBlIC0gP2Z1bmN0aW9uX25hbWUgLiBUaGlzIHdpbGwgcHJvbXB0IHRoZSBoZWxwIGZpbGVzIHRvIHBvcCB1cCBpbiB0aGUgYm90dG9tIHJpZ2h0IHBhbmUgb2YgUlN0dWRpby4gSGVscCBmaWxlcyBwcm92aWRlIGluZm9ybWF0aW9uIGFib3V0IHdoYXQgdGhlIGZ1bmN0aW9uIGRvZXMsIHRoZSBhcmd1bWVudHMgaXMgdGFrZXMgaW4sIGFuZCBleGFtcGxlcy4gV2UgY2FuIGRpcmVjdGx5IHNlYXJjaCBpbiB0aGUgaGVscCBwYW5lIGFzIHdlbGwuDQpgYGB7cn0NCj9tZWFuDQo/cm5vcm0NCj9jDQpgYGANCg0KIyMgQXNzaWdubWVudCBvcGVyYXRvcg0KDQotIGluIFIgd2UgdXNlIDwtIChhc3NpZ24pIHRvIGFzc2lnbiB2YXJpYWJsZSBhbmQgZnVuY3Rpb24gdmFsdWVzDQotIHdlIHVzZSA9IChlcXVhbHMpIGluc2lkZSBmdW5jdGlvbnMgdG8gZ2l2ZSBhcmd1bWVudHMgdmFsdWVzIA0KYGBge3J9DQpteS5udW1iZXIgPC0gMQ0KZGljZSA8LSAxOjYNCnJhbmRvbS5udW1iZXJzIDwtIHJub3JtKDEwLCBtZWFuID0gNSwgc2QgPSAyKQ0KYGBgDQoNCiMjSW5kZXhpbmcNCg0KLSBXQVJOSU5HOiBSIHN0YXJ0cyBpbmRleGluZyBhIDEgKG1vc3Qgb3RoZXIgY29kaW5nIGxhbmd1YWdlcyBzdGFydCBpbmRleGluZyBhdCAwKQ0KLSBJbiBSIHdlIHVzZSBbIF0gdG8gcmVmZXJlbmNlIGl0ZW1zIGF0IGFuIGluZGV4IGluIGEgdmVjdG9yIA0KYGBge3J9DQpteS52ZWN0b3IgPC0gMTA6MTUNCm15LnZlY3Rvcls1XSAjIGdldCB0aGUgMXN0IGVsZW1lbnQgaW4gbXkudmVjdG9yDQpteS52ZWN0b3JbYygxLDYpXSAjIGdldCB0aGUgMm5kLCAzcmQsIDR0aCBlbGVtZW50cyBpbiBteS52ZWN0b3INCmBgYA0KLSBCZSBjYXJlZnVsIHRoYXQgeW91IGRvIG5vdCB0cnkgdG8gaW5kZXggc29tZXRoaW5nIHRoYXQgZG9lcyBub3QgZXhpc3QNCmBgYHtyfQ0KbXkudmVjdG9yWzddICMgdGhpcyB3aWxsIHNheSBOQSBiZWNhdXNlIHRoZXJlIGlzIG5vdGhpbmcgaW4gdGhlIDd0aCBlbGVtZW50IG9mIG15LnZlY3Rvcg0KYGBgDQoNCi0gV2UgY2FuIHVzZSB0aGUgIi0iIHNpZ24gdG8gaW5kaWNhdGUgd2Ugd2FudCBhbGwgZWxlbWVudHMgImV4Y2VwdCIgdGhlIG9uZXMgbGlzdGVkDQpgYGB7cn0NCiMgb3V0cHV0IGFsbCBlbGVtZW50cyBleGNlcHQgdGhlIGZpcnN0IG9uZSANCm15LnZlY3RvclsgLTEgXQ0KDQojb3V0cHV0IGFsbCBlbGVtZW50cyBleGNlcHQgdGhlIHRoZSBmaXJzdCBhbmQgdGhpcmQgb25lcyANCm15LnZlY3RvclsgLWMoMSwgMykgXQ0KYGBgDQoNCi0gVG8gY3JlYXRlIGEgbWF0cml4LCB3ZSB1c2UgdGhlIG1hdHJpeCBmdW5jdGlvbg0KYGBge3J9DQpteS5tYXRyaXggPC0gbWF0cml4KDE6MTAsIG5yb3cgPSAyLCBuY29sPTUsIGJ5cm93ID0gVFJVRSkNCm15Lm1hdHJpeA0KYGBgDQotIFdoZW4gaW5kZXhpbmcgbWF0cmljZXMsIHRoZSBmb3JtYXQgaXMgW3Jvd19udW1iZXIsIGNvbHVtbl9udW1iZXJdDQpgYGB7cn0NCm15Lm1hdHJpeFsxLCAyXQ0KYGBgDQotIElmIHdlIGxlYXZlIHRoZSByb3dfbnVtYmVyIGJsYW5rLCBpdCB3aWxsIG91dHB1dCBldmVyeSBlbGVtZW50IGluIHRoYXQgY29sdW1uDQpgYGB7cn0NCm15Lm1hdHJpeFsgLCA1XSAjb3V0cHV0cyBhbGwgbnVtYmVyIGluIGNvbHVtbiA1DQpgYGANCi0gU2ltaWxhciBmb3Igcm93cw0KYGBge3J9DQpteS5tYXRyaXhbMiwgXSAjb3V0cHV0cyBhbGwgbnVtYmVyIGluIHJvdyAxDQpgYGANCg0KIyMgQ2hlY2tpbmcgb2JqZWN0IHR5cGVzIGluIFINCi0gWW91IGNhbiBjaGVjayB0aGUgb2JqZWN0IHR5cGUgaW4gciB1c2luZyB0aGUgZnVuY3Rpb24gYGNsYXNzKClgLg0KYGBge3J9DQpjbGFzcyg0KQ0KY2xhc3MoImNoYXIiKQ0KY2xhc3MoYygiYSIsImIiLCJjIikpDQpjbGFzcyhtYXRyaXgoMTo2LG5yb3c9MyxieXJvdz1UKSkNCmBgYA0KDQojIyBWZWN0b3JpemF0aW9uDQoNCi0gVW5saWtlIG1vc3Qgb3RoZXIgY29kaW5nIGxhbmd1YWdlcywgUiBpcyB2ZWN0b3JpemVkLiBXaGF0IGRvZXMgdGhpcyBtZWFuPz8/ICAgVGhlIGRlZmF1bHQgZm9yIFIgaXMgdG8gZG8gY29tcG9uZW50IHdpc2Ugb3BlcmF0aW9ucyBhbmQgbm90IHRyYWRpdGlvbmFsICAgICAgbWF0cml4IG11bHRpcGxpY2F0aW9uLiANCi0gSW4gUiwgd2UgY2FuIG11bHRpcGx5IGEgY29uc3RhbnQgYnkgYSB2ZWN0b3IuIFRoaXMgd29ya3MganVzdCBsaWtlIHRyYWRpdGlvbmFsIG1hdGhlbWF0aWNzIHdvdWxkDQpgYGB7cn0NCnggPC0gYygxLCAyLCAzKQ0KMiAqIHggIyA9IGMoMiwgNCwgNikNCmBgYA0KLSBIb3dldmVyLCB0aGF0IGlzIHdoZXJlIHRoZSBzaW1pbGFyaXRpZXMgYmV0d2VlbiBSIGFuZCB0cmFkaXRpb25hbCBtYXRoZW1hdGljcyBlbmQuIEluIHRyYWRpdGlvbmFsIG1hdGhlbWF0aWNzIGlmIEkgbXVsdGlwbHkgWyAyICA0ICA2XSAqIFs1LCAxMCwgMTVdICBpIHdvdWxkIGdldCBbIDIgIDQgIDZdICogWzUsIDEwLCAxNV0gPSAoMiAqIDUpICsgKDQgKiAxMCkgKyAoNiAqIDE1KSA9IDE0MA0KLSBUaGlzIGlzIG5vdCB3aGF0IGhhcHBlbiBpbiBSIA0KYGBge3J9DQp2MSA8LSBjKDIsIDQsIDYpDQp2MiA8LSBjKDUsIDEwLCAxNSkgDQoNCnYxICogdjIgI291dHB1dHMgYygxMCwgNDAsIDkwKS4gVGhpcyBpcyBub3QgMTQwLiBXaGF0IGhhcHBlbmVkPyANCmBgYA0KLSBSIGRpZCBlbGVtZW50IHdpc2UgY29tcHV0YXRpb25zLiBSIHNhdyB0aGF0IHlvdSBoYXZlIDIgdmVjdG9ycywgZWFjaCBvZiBsZW5ndGggMy4gSXQgbXVsdGlwbGllZCB0aGUgZmlyc3QgZWxlbWVudCBpbiB2MSBhbmQgdGhlIGZpcnN0IGVsZW1lbnQgaW4gdjIsDQp0aGVuIG11bHRpcGxpZWQgdGhlIHNlY29uZCBlbGVtZW50IGluIHYxIGFuZCB0aGUgc2Vjb25kIGVsZW1lbnQgaW4gdjIsIHRoZW4gbXVsdGlwbGllZCB0aGUgdGhpcmQgZWxlbWVudCBpbiB2MSBhbmQgdGhlIHRoaXJkIGVsZW1lbnQgaW4gdjIsIGFuZCBvdXRwdXRzIG9uZSB2ZWN0b3Igb2YgbGVuZ3RoIDMuDQotIFNpbWlsYXIgdGhpbmdzIGhhcHBlbiBmb3IgKywgLSwgLywgYW5kIF4NCmBgYHtyfQ0KdjEgKyB2Mg0KdjEgLSB2Mg0KdjEgLyB2Mg0KdjJedjENCmBgYA0KDQotIElmIHdlIHdhbnQgdG8gZG8gdHJhZGl0aW9uYWwgbWF0cml4IG11bHRpcGxpY2F0aW9uLCB3ZSB1c2UgYCUqJWAuIFRoZSBvdXRwdXQgd2lsbCBiZSBhIG1hdHJpeCwgbm90IGEgdmVjdG9yIA0KYGBge3J9DQp2MSAlKiUgdjIgIyA9IDE0MA0KYGBgDQotIE5vdGUsIGlmIHdlIGV2ZXIgd2FudCB0byBjYWxjdWxhdGUgdGhlIGludmVyc2Ugb2YgYSBtYXRyaXgsIHdlIHVzZSBzb2x2ZSgpDQpgYGB7cn0NCm1hdCA8LSBtYXRyaXgoYygxLDIsMyw0KSwgbnJvdyA9IDIsIG5jb2wgPSAyKQ0KDQo/c29sdmUNCnNvbHZlKG1hdCkgI2ludmVyc2Ugb2YgbWF0DQoNCm1hdCAlKiUgc29sdmUobWF0KSAjIGlkZW50aXR5IG1hdHJpeA0KYGBgDQoNCiMjIERhdGEgRnJhbWVzDQoNCi0gUiBzdG9yZXMgZGF0YSBpbiBvYmplY3RzIGNhbGxlZCBkYXRhIGZyYW1lcyANCi0gTGV0cyBjcmVhdGUgYSBkYXRhIGZyYW1lIHdpdGggMiBjb2x1bW5zLCBBZ2UgKGluIHllYXJzKSBhbmQgSGVpZ2h0IChpbiBjbSkNCmBgYHtyfQ0KbXkuZGF0YSA8LSBkYXRhLmZyYW1lKCAiQWdlIiA9IGMoMjMsIDEyLCA5MCwgNDEsIDg3KSwgDQogICAgICAgICAgICAgICAgICAgICAgICJIZWlnaHQiID0gYygxNjIuMywgMTIxLjAsIDE3NC44LCAxODUuMiwgMTY4LjkpKQ0KDQojIFRoaXMgd2lsbCBkaXNwbGF5IHlvdXIgZGF0YSBmcmFtZSBpbiB0aGUgY29uc29sZQ0KbXkuZGF0YQ0KYGBgDQotIFRoaXMgaXMgd2lsbCBkaXNwbGF5IHlvdXIgZGF0YSBpbiBhIG5ldyB3aW5kb3cgDQpgYGB7cn0NClZpZXcobXkuZGF0YSkNCmBgYA0KLSBFcXVpdmFsZW50bHksIHlvdSBjYW4gYWxzbyBjbGljayBvbiB0aGUgIm15LmRhdGEiIHJvdyBpbiB0aGUgRW52aXJvbm1lbnQgcGFuZQ0KLSBXZSBjYW4gcmVmZXJlbmNlIHRoZSBpbmZvcm1hdGlvbiBpbiAiQWdlIiBjb2x1bW4gaW4gYSBmZXcgZGlmZmVyZW50IHdheXMuIEFsbCBvZiB0aGUgZm9sbG93aW5nIGFyZSBlcXVpdmFsZW50IA0KYGBge3J9DQpteS5kYXRhWyAsIDFdDQpteS5kYXRhWyAsICJBZ2UiXQ0KbXkuZGF0YSRBZ2UNCmBgYA0KDQo8IS0tICMjIFBhY2thZ2VzICsgVGlkeXZlcnNlIC0tPg0KPCEtLSAtIFlvdSBvbmx5IG5lZWQgdG8gaW5zdGFsbCBhIHBhY2thZ2Ugb25jZSAob24gZXZlcnkgbWFjaGluZSB5b3UncmUgb24pIC0tPg0KPCEtLSBgYGB7cn0gLS0+DQo8IS0tIGluc3RhbGwucGFja2FnZXMoInRpZHl2ZXJzZSIpIC0tPg0KDQo8IS0tICMjIGV2ZXJ5IHRpbWUgeW91IHdhbnQgdG8gdXNlIGEgZnVuY3Rpb24gaW5zaWRlIGEgcGFja2FnZSwgeW91IG5lZWQgdG8gbG9hZCB0aGUgbGlicmFyeSAtLT4NCjwhLS0gbGlicmFyeSh0aWR5dmVyc2UpICNub3cgd2UgY2FuIHVzZSB0aGUgdGlkeXZlcnNlIGZ1bmN0aW9ucyEgIC0tPg0KPCEtLSBgYGAgLS0+DQo8IS0tIC0gQmVmb3JlIHdlIGdldCBpbnRvIGZ1bmN0aW9ucyBpbiB0aGUgdGlkeXZlcnNlLCB3ZSB3aWxsIGludHJvZHVjZSBvbmUgbW9yZSBzcGVjaWFsIG9wZXJhdG9yIGluIFIgLS0+DQo8IS0tIC0gVGhlIHRpZHl2ZXJzZSBwYWNrYWdlIGNvbnRhaW5zIHRoZSBgJT4lYCAgKHBpcGUpIG9wZXJhdG9yICAtLT4NCjwhLS0gLSBQaXBlIHRha2VzIHdoYXQgZXZlciBpcyBiZWZvcmUgdGhlIGAlPiVgIGFuZCBpbnB1dHMgYXMgdGhlIGZpcnN0IGVsZW1lbnQgaW50byB3aGF0ZXZlciBpcyBhZnRlciB0aGUgYCU+JWAuIC0tPg0KDQo8IS0tICMjIEFuIGV4YW1wbGUgdXNpbmcgdGhlIG1lYW4gZnVuY3Rpb24gLS0+DQo8IS0tIGBgYHtyfSAtLT4NCjwhLS0gP21lYW4gIC0tPg0KPCEtLSBudW1iZXJzIDwtIGMoMSw1LDYsOCwyMyw0NSw2NykgLS0+DQo8IS0tIGBgYCAtLT4NCjwhLS0gLVRoZSBmb2xsb3dpbmcgYXJlIGVxdWl2YWxlbnQgIC0tPg0KPCEtLSAtIE1ldGhvZCAxICAtLT4NCjwhLS0gYGBge3J9IC0tPg0KPCEtLSBtZWFuKG51bWJlcnMpIC0tPg0KPCEtLSBgYGAgLS0+DQo8IS0tIC0gTWV0aG9kIDIgLS0+DQo8IS0tIGBgYHtyfSAtLT4NCjwhLS0gbnVtYmVycyAlPiUgLS0+DQo8IS0tICAgbWVhbigpIC0tPg0KPCEtLSBgYGAgLS0+DQo8IS0tIC0gUGlwZSBpcyB1c3VhbGx5IHVzZWQgd2hlbiB3ZSBoYXZlIGEgc2VyaWVzIG9mIG9wZXJhdGlvbnMgd2Ugd2FudCB0byBjb21wdXRlIC0tPg0KPCEtLSAtIExldHMgdXNlIHRoZSBpcmlzIGRhdGEgc2V0IGFzIGFuIGV4YW1wbGUgIC0tPg0KPCEtLSBgYGB7cn0gLS0+DQo8IS0tIGlyaXMgLS0+DQo8IS0tIGBgYCAtLT4NCjwhLS0gLSBTYXkgSSB3YW50IHRvIGFycmFuZ2UgdGhlIHJvd3MgaW4gdGhpcyBkYXRhIHNldCBieSB0aGUgU2VwYWwuTGVuZ3RoLiAgLS0+DQo8IS0tIC0gVGhlIGZvbGxvd2luZyBhcmUgZXF1aXZhbGVudCAtLT4NCjwhLS0gLSBNZXRob2QgMSAtLT4NCjwhLS0gYGBge3J9IC0tPg0KPCEtLSBhcnJhbmdlKGlyaXMsIFNlcGFsLkxlbmd0aCkgLS0+DQo8IS0tIGBgYCAtLT4NCjwhLS0gLSBNZXRob2QgMiAtLT4NCjwhLS0gYGBge3J9IC0tPg0KPCEtLSBpcmlzICU+JSAtLT4NCjwhLS0gICBhcnJhbmdlKFNlcGFsLkxlbmd0aCkgLS0+DQo8IS0tIGBgYCAtLT4NCjwhLS0gLSBCdXQgbm93IHNheSB3ZSBvbmx5IHdhbnQgdG8ga2VlcCByb3dzIHdpdGggU2VwYWwuV2lkdGggPiAzIEFORCBhcnJhbmdlIHRoZSB0YWJsZSBieSBTZXBhbC5MZW5ndGggLS0+DQo8IS0tIC0gVGhlIGZvbGxvd2luZyBhcmUgZXF1aXZhbGVudCAgLS0+DQo8IS0tIC0gTWV0aG9kIDEgLS0+DQo8IS0tIGBgYHtyfSAtLT4NCjwhLS0gdGVtcDEgPC0gYXJyYW5nZShpcmlzLCBTZXBhbC5MZW5ndGgpIC0tPg0KPCEtLSByZXN1bHQgPC0gZmlsdGVyKHRlbXAxLCBTZXBhbC5XaWR0aCA+IDMpIC0tPg0KPCEtLSByZXN1bHQgIC0tPg0KPCEtLSBgYGAgLS0+DQo8IS0tIC0gTWV0aG9kIDIgLS0+DQo8IS0tIGBgYHtyfSAtLT4NCjwhLS0gaXJpcyAlPiUgLS0+DQo8IS0tICAgYXJyYW5nZShTZXBhbC5MZW5ndGgpICU+JSAtLT4NCjwhLS0gICBmaWx0ZXIoU2VwYWwuV2lkdGggPiAzKSAtLT4NCjwhLS0gYGBgIC0tPg0KPCEtLSAtIEJvdGggbWV0aG9kcyB0ZWNobmljYWxseSB3b3JrLCBidXQgbWV0aG9kIDIgaXMgbXVzdCBlYXNpZXIgdG8gcmVhZCBhbmQgdG9vayBhIGxvdCBsZXNzIHR5cGluZyEgIC0tPg0KPCEtLSAtIChhZHZhbmNlZCkgTWV0aG9kIDIgdGFrZXMgdXAgc2lnbmlmaWNhbnRseSBsZXNzIG1lbW9yeSBvbiB5b3VyIG1hY2hpbmUgdGhhbiBNZXRob2QgMS4gVGhpcyBpcyBvbmUgb2YgdGhlIHByaW1hcnkgcmVhc29ucyB3ZSB1c2UgJT4lIC0tPg0KDQojIyBBZGRpdGlvbmFsIHJlc291cmNlcw0KDQotIExlYXJuaW5nIGJhc2UgUiBvcGVyYXRpb25zICg8aHR0cHM6Ly93d3cudzNzY2hvb2xzLmNvbS9yLz4pLg0KLSBMZWFybmluZyB0aWR5dmVyc2UgKHNwZWNpZmljYWxseSBkcGx5cikgb3BlcmF0aW9ucyAoPGh0dHBzOi8vZHBseXIudGlkeXZlcnNlLm9yZy9hcnRpY2xlcy9kcGx5ci5odG1sPikuDQoNCiMjIEFzc2lnbm1lbnRzIGJlZm9yZSBuZXh0IGxlY3R1cmUgKEp1bHkgNykNCi0gVGlkeSBEYXRhIEFzc2lnbm1lbnQgKGR1ZSBkYXRlIGV4dGVuZGVkIHRvIHRvbW9ycm93IDk6NTkgYW0pDQotIERhdGFDb21wdXRpbmcgRWJvb2sgQ2hhcHRlciAxIEV4ZXJjaXNlcyAoMS4xLCAxLjIsMS4zIGFuZCAxLjUpIA0KLSBSZWFkaW5nIFF1aXogYmFzZWQgb24gRGF0YUNvbXB1dGluZyBFYm9vayBDaGFwdGVyIDMgYW5kIDQNCg==</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIkRheSA0Ig0KYXV0aG9yOg0KLSAnSW5zdHJ1Y3RvcjogU291bXlhIE11a2hlcmplZScNCi0gJ0NvbnRlbnQgY3JlZGl0OiBEci4gTWF0dGhldyBCZWNrbWFuIGFuZCBPbGl2aWEgQmVjaycNCmRhdGU6ICJKdWx5IDcsIDIwMjMiDQpvdXRwdXQ6DQogIHNsaWR5X3ByZXNlbnRhdGlvbjogZGVmYXVsdA0KICBodG1sX25vdGVib29rOiBkZWZhdWx0DQotLS0NCg0KIyMgUGFja2FnZXMgKyBUaWR5dmVyc2UNCi0gWW91IG9ubHkgbmVlZCB0byBpbnN0YWxsIGEgcGFja2FnZSBvbmNlIChvbiBldmVyeSBtYWNoaW5lIHlvdSdyZSBvbikNCmBgYHtyfQ0KaW5zdGFsbC5wYWNrYWdlcygidGlkeXZlcnNlIikNCg0KIyMgZXZlcnkgdGltZSB5b3Ugd2FudCB0byB1c2UgYSBmdW5jdGlvbiBpbnNpZGUgYSBwYWNrYWdlLCB5b3UgbmVlZCB0byBsb2FkIHRoZSBsaWJyYXJ5DQpsaWJyYXJ5KHRpZHl2ZXJzZSkgI25vdyB3ZSBjYW4gdXNlIHRoZSB0aWR5dmVyc2UgZnVuY3Rpb25zISANCmBgYA0KLSBCZWZvcmUgd2UgZ2V0IGludG8gZnVuY3Rpb25zIGluIHRoZSB0aWR5dmVyc2UsIHdlIHdpbGwgaW50cm9kdWNlIG9uZSBtb3JlIHNwZWNpYWwgb3BlcmF0b3IgaW4gUg0KLSBUaGUgdGlkeXZlcnNlIHBhY2thZ2UgY29udGFpbnMgdGhlIGAlPiVgICAocGlwZSkgb3BlcmF0b3IgDQotIFBpcGUgdGFrZXMgd2hhdCBldmVyIGlzIGJlZm9yZSB0aGUgYCU+JWAgYW5kIGlucHV0cyBhcyB0aGUgZmlyc3QgZWxlbWVudCBpbnRvIHdoYXRldmVyIGlzIGFmdGVyIHRoZSBgJT4lYC4NCg0KIyMgQW4gZXhhbXBsZSB1c2luZyB0aGUgbWVhbiBmdW5jdGlvbg0KYGBge3J9DQo/bWVhbiANCm51bWJlcnMgPC0gYygxLDUsNiw4LDIzLDQ1LDY3KQ0KYGBgDQotVGhlIGZvbGxvd2luZyBhcmUgZXF1aXZhbGVudCANCi0gTWV0aG9kIDEgDQpgYGB7cn0NCm1lYW4obnVtYmVycykNCmBgYA0KLSBNZXRob2QgMg0KYGBge3J9DQpudW1iZXJzICU+JQ0KICBtZWFuKCkNCmBgYA0KLSBQaXBlIGlzIHVzdWFsbHkgdXNlZCB3aGVuIHdlIGhhdmUgYSBzZXJpZXMgb2Ygb3BlcmF0aW9ucyB3ZSB3YW50IHRvIGNvbXB1dGUNCi0gTGV0cyB1c2UgdGhlIGlyaXMgZGF0YSBzZXQgYXMgYW4gZXhhbXBsZSANCmBgYHtyfQ0KaXJpcw0KYGBgDQotIFNheSBJIHdhbnQgdG8gYXJyYW5nZSB0aGUgcm93cyBpbiB0aGlzIGRhdGEgc2V0IGJ5IHRoZSBTZXBhbC5MZW5ndGguIA0KLSBUaGUgZm9sbG93aW5nIGFyZSBlcXVpdmFsZW50DQotIE1ldGhvZCAxDQpgYGB7cn0NCmFycmFuZ2UoaXJpcywgU2VwYWwuTGVuZ3RoKQ0KYGBgDQotIE1ldGhvZCAyDQpgYGB7cn0NCmlyaXMgJT4lDQogIGFycmFuZ2UoU2VwYWwuTGVuZ3RoKQ0KYGBgDQotIEJ1dCBub3cgc2F5IHdlIG9ubHkgd2FudCB0byBrZWVwIHJvd3Mgd2l0aCBTZXBhbC5XaWR0aCA+IDMgQU5EIGFycmFuZ2UgdGhlIHRhYmxlIGJ5IFNlcGFsLkxlbmd0aA0KLSBUaGUgZm9sbG93aW5nIGFyZSBlcXVpdmFsZW50IA0KLSBNZXRob2QgMQ0KYGBge3J9DQp0ZW1wMSA8LSBhcnJhbmdlKGlyaXMsIFNlcGFsLkxlbmd0aCkNCnJlc3VsdCA8LSBmaWx0ZXIodGVtcDEsIFNlcGFsLldpZHRoID4gMykNCnJlc3VsdCANCmBgYA0KLSBNZXRob2QgMg0KYGBge3J9DQppcmlzICU+JQ0KICBhcnJhbmdlKFNlcGFsLkxlbmd0aCkgJT4lDQogIGZpbHRlcihTZXBhbC5XaWR0aCA+IDMpDQpgYGANCi0gQm90aCBtZXRob2RzIHRlY2huaWNhbGx5IHdvcmssIGJ1dCBtZXRob2QgMiBpcyBtdXN0IGVhc2llciB0byByZWFkIGFuZCB0b29rIGEgbG90IGxlc3MgdHlwaW5nISANCi0gKGFkdmFuY2VkKSBNZXRob2QgMiB0YWtlcyB1cCBzaWduaWZpY2FudGx5IGxlc3MgbWVtb3J5IG9uIHlvdXIgbWFjaGluZSB0aGFuIE1ldGhvZCAxLiBUaGlzIGlzIG9uZSBvZiB0aGUgcHJpbWFyeSByZWFzb25zIHdlIHVzZSAlPiU=</div>
 
 
 
@@ -2254,7 +1933,7 @@ $(document).ready(function () {
 <!-- code folding -->
 <script>
 $(document).ready(function () {
-  window.initializeSourceEmbed("Basic operations.Rmd");
+  window.initializeSourceEmbed("Day 4.Rmd");
   window.initializeCodeFolding("show" === "show");
 });
 </script>

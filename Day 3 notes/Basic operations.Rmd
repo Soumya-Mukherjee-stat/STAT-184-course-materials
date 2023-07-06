@@ -60,12 +60,15 @@ c(1, 2, 3)
 ```{r}
 c("A", "B", "C")
 ```
+```{r}
+c(1,"A",3)
+```
 
 - R has some basic functions already loaded in 
 ```{r}
 mean(c(1, 2, 3, 4, 5)) #mean of 1, 2, 3, 4, 5
 factorial(4) # calculate 4!
-rnorm(10, mean = 5, sd = 2) #generate 10 normal random variables with mean 5 and standard deviation 2
+rnorm(n = 10, mean = 5, sd = 2) #generate 10 normal random variables with mean 5 and standard deviation 2
 ```
 
 - Whenever we want more information about a function we type - ?function_name . This will prompt the help files to pop up in the bottom right pane of RStudio. Help files provide information about what the function does, the arguments is takes in, and examples. We can directly search in the help pane as well.
@@ -91,8 +94,8 @@ random.numbers <- rnorm(10, mean = 5, sd = 2)
 - In R we use [ ] to reference items at an index in a vector 
 ```{r}
 my.vector <- 10:15
-my.vector[1] # get the 1st element in my.vector
-my.vector[2:4] # get the 2nd, 3rd, 4th elements in my.vector
+my.vector[5] # get the 1st element in my.vector
+my.vector[c(1,6)] # get the 2nd, 3rd, 4th elements in my.vector
 ```
 - Be careful that you do not try to index something that does not exist
 ```{r}
@@ -110,7 +113,7 @@ my.vector[ -c(1, 3) ]
 
 - To create a matrix, we use the matrix function
 ```{r}
-my.matrix <- matrix(1:10, nrow = 2, ncol=5)
+my.matrix <- matrix(1:10, nrow = 2, ncol=5, byrow = TRUE)
 my.matrix
 ```
 - When indexing matrices, the format is [row_number, column_number]
@@ -121,9 +124,9 @@ my.matrix[1, 2]
 ```{r}
 my.matrix[ , 5] #outputs all number in column 5
 ```
-- Similar for columns
+- Similar for rows
 ```{r}
-my.matrix[1, ] #outputs all number in row 1
+my.matrix[2, ] #outputs all number in row 1
 ```
 
 ## Checking object types in R
@@ -180,7 +183,7 @@ mat %*% solve(mat) # identity matrix
 - R stores data in objects called data frames 
 - Lets create a data frame with 2 columns, Age (in years) and Height (in cm)
 ```{r}
-my.data <- data.frame( "Age" = c(23, 12, 90, 41, 87),
+my.data <- data.frame( "Age" = c(23, 12, 90, 41, 87), 
                        "Height" = c(162.3, 121.0, 174.8, 185.2, 168.9))
 
 # This will display your data frame in the console
@@ -198,67 +201,72 @@ my.data[ , "Age"]
 my.data$Age
 ```
 
-## Packages + Tidyverse
-- You only need to install a package once (on every machine you're on)
-```{r}
-install.packages("tidyverse",repos = "http://cran.us.r-project.org")
+<!-- ## Packages + Tidyverse -->
+<!-- - You only need to install a package once (on every machine you're on) -->
+<!-- ```{r} -->
+<!-- install.packages("tidyverse") -->
 
-## every time you want to use a function inside a package, you need to load the library
-library(tidyverse) #now we can use the tidyverse functions! 
-```
-- Before we get into functions in the tidyverse, we will introduce one more special operator in R
-- The tidyverse package contains the `%>%`  (pipe) operator 
-- Pipe takes what ever is before the `%>%` and inputs as the first element into whatever is after the `%>%`.
+<!-- ## every time you want to use a function inside a package, you need to load the library -->
+<!-- library(tidyverse) #now we can use the tidyverse functions!  -->
+<!-- ``` -->
+<!-- - Before we get into functions in the tidyverse, we will introduce one more special operator in R -->
+<!-- - The tidyverse package contains the `%>%`  (pipe) operator  -->
+<!-- - Pipe takes what ever is before the `%>%` and inputs as the first element into whatever is after the `%>%`. -->
 
-## An example using the mean function
-```{r}
-?mean 
-numbers <- c(1,5,6,8,23,45,67)
-```
--The following are equivalent 
-- Method 1 
-```{r}
-mean(numbers)
-```
-- Method 2
-```{r}
-numbers %>%
-  mean()
-```
-- Pipe is usually used when we have a series of operations we want to compute
-- Lets use the iris data set as an example 
-```{r}
-iris
-```
-- Say I want to arrange the rows in this data set by the Sepal.Length. 
-- The following are equivalent
-- Method 1
-```{r}
-arrange(iris, Sepal.Length)
-```
-- Method 2
-```{r}
-iris %>%
-  arrange(Sepal.Length)
-```
-- But now say we only want to keep rows with Sepal.Width > 3 AND arrange the table by Sepal.Length
-- The following are equivalent 
-- Method 1
-```{r}
-temp1 <- arrange(iris, Sepal.Length)
-result <- filter(temp1, Sepal.Width > 3)
-result 
-```
-- Method 2
-```{r}
-iris %>%
-  arrange(Sepal.Length) %>%
-  filter(Sepal.Width > 3)
-```
-- Both methods technically work, but method 2 is must easier to read and took a lot less typing! 
-- (advanced) Method 2 takes up significantly less memory on your machine than Method 1. This is one of the primary reasons we use %>%
+<!-- ## An example using the mean function -->
+<!-- ```{r} -->
+<!-- ?mean  -->
+<!-- numbers <- c(1,5,6,8,23,45,67) -->
+<!-- ``` -->
+<!-- -The following are equivalent  -->
+<!-- - Method 1  -->
+<!-- ```{r} -->
+<!-- mean(numbers) -->
+<!-- ``` -->
+<!-- - Method 2 -->
+<!-- ```{r} -->
+<!-- numbers %>% -->
+<!--   mean() -->
+<!-- ``` -->
+<!-- - Pipe is usually used when we have a series of operations we want to compute -->
+<!-- - Lets use the iris data set as an example  -->
+<!-- ```{r} -->
+<!-- iris -->
+<!-- ``` -->
+<!-- - Say I want to arrange the rows in this data set by the Sepal.Length.  -->
+<!-- - The following are equivalent -->
+<!-- - Method 1 -->
+<!-- ```{r} -->
+<!-- arrange(iris, Sepal.Length) -->
+<!-- ``` -->
+<!-- - Method 2 -->
+<!-- ```{r} -->
+<!-- iris %>% -->
+<!--   arrange(Sepal.Length) -->
+<!-- ``` -->
+<!-- - But now say we only want to keep rows with Sepal.Width > 3 AND arrange the table by Sepal.Length -->
+<!-- - The following are equivalent  -->
+<!-- - Method 1 -->
+<!-- ```{r} -->
+<!-- temp1 <- arrange(iris, Sepal.Length) -->
+<!-- result <- filter(temp1, Sepal.Width > 3) -->
+<!-- result  -->
+<!-- ``` -->
+<!-- - Method 2 -->
+<!-- ```{r} -->
+<!-- iris %>% -->
+<!--   arrange(Sepal.Length) %>% -->
+<!--   filter(Sepal.Width > 3) -->
+<!-- ``` -->
+<!-- - Both methods technically work, but method 2 is must easier to read and took a lot less typing!  -->
+<!-- - (advanced) Method 2 takes up significantly less memory on your machine than Method 1. This is one of the primary reasons we use %>% -->
 
 ## Additional resources
 
 - Learning base R operations (<https://www.w3schools.com/r/>).
 - Learning tidyverse (specifically dplyr) operations (<https://dplyr.tidyverse.org/articles/dplyr.html>).
+
+## Assignments before next lecture (July 7)
+- Tidy Data Assignment (due date extended to tomorrow 9:59 am)
+- DataComputing Ebook Chapter 1 Exercises (1.1, 1.2,1.3 and 1.5) 
+- Reading Quiz based on DataComputing Ebook Chapter 3 and 4

@@ -594,16 +594,18 @@ button at the top of each chunk.</p>
 </ul>
 <div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a><span class="fu">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;C&quot;</span>)</span></code></pre></div>
 <pre><code>## [1] &quot;A&quot; &quot;B&quot; &quot;C&quot;</code></pre>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" tabindex="-1"></a><span class="fu">c</span>(<span class="dv">1</span>,<span class="st">&quot;A&quot;</span>,<span class="dv">3</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;1&quot; &quot;A&quot; &quot;3&quot;</code></pre>
 <ul>
 <li>R has some basic functions already loaded in</li>
 </ul>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" tabindex="-1"></a><span class="fu">mean</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>)) <span class="co">#mean of 1, 2, 3, 4, 5</span></span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" tabindex="-1"></a><span class="fu">mean</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>)) <span class="co">#mean of 1, 2, 3, 4, 5</span></span></code></pre></div>
 <pre><code>## [1] 3</code></pre>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" tabindex="-1"></a><span class="fu">factorial</span>(<span class="dv">4</span>) <span class="co"># calculate 4!</span></span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" tabindex="-1"></a><span class="fu">factorial</span>(<span class="dv">4</span>) <span class="co"># calculate 4!</span></span></code></pre></div>
 <pre><code>## [1] 24</code></pre>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">10</span>, <span class="at">mean =</span> <span class="dv">5</span>, <span class="at">sd =</span> <span class="dv">2</span>) <span class="co">#generate 10 normal random variables with mean 5 and standard deviation 2</span></span></code></pre></div>
-<pre><code>##  [1] 7.350418 5.907836 4.471502 3.139089 5.627793 5.327303 3.934258 4.088039
-##  [9] 6.515274 6.179749</code></pre>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">10</span>, <span class="at">mean =</span> <span class="dv">5</span>, <span class="at">sd =</span> <span class="dv">2</span>) <span class="co">#generate 10 normal random variables with mean 5 and standard deviation 2</span></span></code></pre></div>
+<pre><code>##  [1] 6.513945 4.462790 4.237497 1.426628 8.652765 5.000318 6.921128 6.131821
+##  [9] 4.446070 4.867903</code></pre>
 <ul>
 <li>Whenever we want more information about a function we type -
 ?function_name . This will prompt the help files to pop up in the bottom
@@ -611,10 +613,10 @@ right pane of RStudio. Help files provide information about what the
 function does, the arguments is takes in, and examples. We can directly
 search in the help pane as well.</li>
 </ul>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" tabindex="-1"></a>?mean</span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" tabindex="-1"></a>?mean</span></code></pre></div>
 <pre><code>## starting httpd help server ... done</code></pre>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" tabindex="-1"></a>?rnorm</span>
-<span id="cb37-2"><a href="#cb37-2" tabindex="-1"></a>?c</span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" tabindex="-1"></a>?rnorm</span>
+<span id="cb39-2"><a href="#cb39-2" tabindex="-1"></a>?c</span></code></pre></div>
 </div>
 <div id="assignment-operator" class="slide section level2">
 <h1>Assignment operator</h1>
@@ -623,61 +625,61 @@ search in the help pane as well.</li>
 values</li>
 <li>we use = (equals) inside functions to give arguments values</li>
 </ul>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" tabindex="-1"></a>my.number <span class="ot">&lt;-</span> <span class="dv">1</span></span>
-<span id="cb38-2"><a href="#cb38-2" tabindex="-1"></a>dice <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span></span>
-<span id="cb38-3"><a href="#cb38-3" tabindex="-1"></a>random.numbers <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>, <span class="at">mean =</span> <span class="dv">5</span>, <span class="at">sd =</span> <span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" tabindex="-1"></a>my.number <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb40-2"><a href="#cb40-2" tabindex="-1"></a>dice <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span></span>
+<span id="cb40-3"><a href="#cb40-3" tabindex="-1"></a>random.numbers <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>, <span class="at">mean =</span> <span class="dv">5</span>, <span class="at">sd =</span> <span class="dv">2</span>)</span></code></pre></div>
 <p>##Indexing</p>
 <ul>
 <li>WARNING: R starts indexing a 1 (most other coding languages start
 indexing at 0)</li>
 <li>In R we use [ ] to reference items at an index in a vector</li>
 </ul>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" tabindex="-1"></a>my.vector <span class="ot">&lt;-</span> <span class="dv">10</span><span class="sc">:</span><span class="dv">15</span></span>
-<span id="cb39-2"><a href="#cb39-2" tabindex="-1"></a>my.vector[<span class="dv">1</span>] <span class="co"># get the 1st element in my.vector</span></span></code></pre></div>
-<pre><code>## [1] 10</code></pre>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" tabindex="-1"></a>my.vector[<span class="dv">2</span><span class="sc">:</span><span class="dv">4</span>] <span class="co"># get the 2nd, 3rd, 4th elements in my.vector</span></span></code></pre></div>
-<pre><code>## [1] 11 12 13</code></pre>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" tabindex="-1"></a>my.vector <span class="ot">&lt;-</span> <span class="dv">10</span><span class="sc">:</span><span class="dv">15</span></span>
+<span id="cb41-2"><a href="#cb41-2" tabindex="-1"></a>my.vector[<span class="dv">5</span>] <span class="co"># get the 1st element in my.vector</span></span></code></pre></div>
+<pre><code>## [1] 14</code></pre>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" tabindex="-1"></a>my.vector[<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">6</span>)] <span class="co"># get the 2nd, 3rd, 4th elements in my.vector</span></span></code></pre></div>
+<pre><code>## [1] 10 15</code></pre>
 <ul>
 <li>Be careful that you do not try to index something that does not
 exist</li>
 </ul>
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" tabindex="-1"></a>my.vector[<span class="dv">7</span>] <span class="co"># this will say NA because there is nothing in the 7th element of my.vector</span></span></code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" tabindex="-1"></a>my.vector[<span class="dv">7</span>] <span class="co"># this will say NA because there is nothing in the 7th element of my.vector</span></span></code></pre></div>
 <pre><code>## [1] NA</code></pre>
 <ul>
 <li>We can use the “-” sign to indicate we want all elements “except”
 the ones listed</li>
 </ul>
-<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" tabindex="-1"></a><span class="co"># output all elements except the first one </span></span>
-<span id="cb45-2"><a href="#cb45-2" tabindex="-1"></a>my.vector[ <span class="sc">-</span><span class="dv">1</span> ]</span></code></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" tabindex="-1"></a><span class="co"># output all elements except the first one </span></span>
+<span id="cb47-2"><a href="#cb47-2" tabindex="-1"></a>my.vector[ <span class="sc">-</span><span class="dv">1</span> ]</span></code></pre></div>
 <pre><code>## [1] 11 12 13 14 15</code></pre>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" tabindex="-1"></a><span class="co">#output all elements except the the first and third ones </span></span>
-<span id="cb47-2"><a href="#cb47-2" tabindex="-1"></a>my.vector[ <span class="sc">-</span><span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>) ]</span></code></pre></div>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" tabindex="-1"></a><span class="co">#output all elements except the the first and third ones </span></span>
+<span id="cb49-2"><a href="#cb49-2" tabindex="-1"></a>my.vector[ <span class="sc">-</span><span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>) ]</span></code></pre></div>
 <pre><code>## [1] 11 13 14 15</code></pre>
 <ul>
 <li>To create a matrix, we use the matrix function</li>
 </ul>
-<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" tabindex="-1"></a>my.matrix <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol=</span><span class="dv">5</span>)</span>
-<span id="cb49-2"><a href="#cb49-2" tabindex="-1"></a>my.matrix</span></code></pre></div>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" tabindex="-1"></a>my.matrix <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol=</span><span class="dv">5</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb51-2"><a href="#cb51-2" tabindex="-1"></a>my.matrix</span></code></pre></div>
 <pre><code>##      [,1] [,2] [,3] [,4] [,5]
-## [1,]    1    3    5    7    9
-## [2,]    2    4    6    8   10</code></pre>
+## [1,]    1    2    3    4    5
+## [2,]    6    7    8    9   10</code></pre>
 <ul>
 <li>When indexing matrices, the format is [row_number,
 column_number]</li>
 </ul>
-<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" tabindex="-1"></a>my.matrix[<span class="dv">1</span>, <span class="dv">2</span>]</span></code></pre></div>
-<pre><code>## [1] 3</code></pre>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" tabindex="-1"></a>my.matrix[<span class="dv">1</span>, <span class="dv">2</span>]</span></code></pre></div>
+<pre><code>## [1] 2</code></pre>
 <ul>
 <li>If we leave the row_number blank, it will output every element in
 that column</li>
 </ul>
-<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" tabindex="-1"></a>my.matrix[ , <span class="dv">5</span>] <span class="co">#outputs all number in column 5</span></span></code></pre></div>
-<pre><code>## [1]  9 10</code></pre>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" tabindex="-1"></a>my.matrix[ , <span class="dv">5</span>] <span class="co">#outputs all number in column 5</span></span></code></pre></div>
+<pre><code>## [1]  5 10</code></pre>
 <ul>
-<li>Similar for columns</li>
+<li>Similar for rows</li>
 </ul>
-<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" tabindex="-1"></a>my.matrix[<span class="dv">1</span>, ] <span class="co">#outputs all number in row 1</span></span></code></pre></div>
-<pre><code>## [1] 1 3 5 7 9</code></pre>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" tabindex="-1"></a>my.matrix[<span class="dv">2</span>, ] <span class="co">#outputs all number in row 1</span></span></code></pre></div>
+<pre><code>## [1]  6  7  8  9 10</code></pre>
 </div>
 <div id="checking-object-types-in-r" class="slide section level2">
 <h1>Checking object types in R</h1>
@@ -685,13 +687,13 @@ that column</li>
 <li>You can check the object type in r using the function
 <code>class()</code>.</li>
 </ul>
-<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" tabindex="-1"></a><span class="fu">class</span>(<span class="dv">4</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" tabindex="-1"></a><span class="fu">class</span>(<span class="dv">4</span>)</span></code></pre></div>
 <pre><code>## [1] &quot;numeric&quot;</code></pre>
-<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" tabindex="-1"></a><span class="fu">class</span>(<span class="st">&quot;char&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" tabindex="-1"></a><span class="fu">class</span>(<span class="st">&quot;char&quot;</span>)</span></code></pre></div>
 <pre><code>## [1] &quot;character&quot;</code></pre>
-<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" tabindex="-1"></a><span class="fu">class</span>(<span class="fu">c</span>(<span class="st">&quot;a&quot;</span>,<span class="st">&quot;b&quot;</span>,<span class="st">&quot;c&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" tabindex="-1"></a><span class="fu">class</span>(<span class="fu">c</span>(<span class="st">&quot;a&quot;</span>,<span class="st">&quot;b&quot;</span>,<span class="st">&quot;c&quot;</span>))</span></code></pre></div>
 <pre><code>## [1] &quot;character&quot;</code></pre>
-<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" tabindex="-1"></a><span class="fu">class</span>(<span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>,<span class="at">nrow=</span><span class="dv">3</span>,<span class="at">byrow=</span>T))</span></code></pre></div>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" tabindex="-1"></a><span class="fu">class</span>(<span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>,<span class="at">nrow=</span><span class="dv">3</span>,<span class="at">byrow=</span>T))</span></code></pre></div>
 <pre><code>## [1] &quot;matrix&quot; &quot;array&quot;</code></pre>
 </div>
 <div id="vectorization" class="slide section level2">
@@ -703,8 +705,8 @@ traditional matrix multiplication.</li>
 <li>In R, we can multiply a constant by a vector. This works just like
 traditional mathematics would</li>
 </ul>
-<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
-<span id="cb65-2"><a href="#cb65-2" tabindex="-1"></a><span class="dv">2</span> <span class="sc">*</span> x <span class="co"># = c(2, 4, 6)</span></span></code></pre></div>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb67-2"><a href="#cb67-2" tabindex="-1"></a><span class="dv">2</span> <span class="sc">*</span> x <span class="co"># = c(2, 4, 6)</span></span></code></pre></div>
 <pre><code>## [1] 2 4 6</code></pre>
 <ul>
 <li>However, that is where the similarities between R and traditional
@@ -713,10 +715,10 @@ mathematics end. In traditional mathematics if I multiply [ 2 4 6] * [5,
 15) = 140</li>
 <li>This is not what happen in R</li>
 </ul>
-<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" tabindex="-1"></a>v1 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>)</span>
-<span id="cb67-2"><a href="#cb67-2" tabindex="-1"></a>v2 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">15</span>) </span>
-<span id="cb67-3"><a href="#cb67-3" tabindex="-1"></a></span>
-<span id="cb67-4"><a href="#cb67-4" tabindex="-1"></a>v1 <span class="sc">*</span> v2 <span class="co">#outputs c(10, 40, 90). This is not 140. What happened? </span></span></code></pre></div>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" tabindex="-1"></a>v1 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>)</span>
+<span id="cb69-2"><a href="#cb69-2" tabindex="-1"></a>v2 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">15</span>) </span>
+<span id="cb69-3"><a href="#cb69-3" tabindex="-1"></a></span>
+<span id="cb69-4"><a href="#cb69-4" tabindex="-1"></a>v1 <span class="sc">*</span> v2 <span class="co">#outputs c(10, 40, 90). This is not 140. What happened? </span></span></code></pre></div>
 <pre><code>## [1] 10 40 90</code></pre>
 <ul>
 <li>R did element wise computations. R saw that you have 2 vectors, each
@@ -726,33 +728,33 @@ in v2, then multiplied the third element in v1 and the third element in
 v2, and outputs one vector of length 3.</li>
 <li>Similar things happen for +, -, /, and ^</li>
 </ul>
-<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" tabindex="-1"></a>v1 <span class="sc">+</span> v2</span></code></pre></div>
+<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" tabindex="-1"></a>v1 <span class="sc">+</span> v2</span></code></pre></div>
 <pre><code>## [1]  7 14 21</code></pre>
-<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" tabindex="-1"></a>v1 <span class="sc">-</span> v2</span></code></pre></div>
+<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" tabindex="-1"></a>v1 <span class="sc">-</span> v2</span></code></pre></div>
 <pre><code>## [1] -3 -6 -9</code></pre>
-<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" tabindex="-1"></a>v1 <span class="sc">/</span> v2</span></code></pre></div>
+<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1" tabindex="-1"></a>v1 <span class="sc">/</span> v2</span></code></pre></div>
 <pre><code>## [1] 0.4 0.4 0.4</code></pre>
-<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1" tabindex="-1"></a>v2<span class="sc">^</span>v1</span></code></pre></div>
+<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1" tabindex="-1"></a>v2<span class="sc">^</span>v1</span></code></pre></div>
 <pre><code>## [1]       25    10000 11390625</code></pre>
 <ul>
 <li>If we want to do traditional matrix multiplication, we use
 <code>%*%</code>. The output will be a matrix, not a vector</li>
 </ul>
-<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1" tabindex="-1"></a>v1 <span class="sc">%*%</span> v2 <span class="co"># = 140</span></span></code></pre></div>
+<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1" tabindex="-1"></a>v1 <span class="sc">%*%</span> v2 <span class="co"># = 140</span></span></code></pre></div>
 <pre><code>##      [,1]
 ## [1,]  140</code></pre>
 <ul>
 <li>Note, if we ever want to calculate the inverse of a matrix, we use
 solve()</li>
 </ul>
-<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1" tabindex="-1"></a>mat <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">2</span>)</span>
-<span id="cb79-2"><a href="#cb79-2" tabindex="-1"></a></span>
-<span id="cb79-3"><a href="#cb79-3" tabindex="-1"></a>?solve</span>
-<span id="cb79-4"><a href="#cb79-4" tabindex="-1"></a><span class="fu">solve</span>(mat) <span class="co">#inverse of mat</span></span></code></pre></div>
+<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" tabindex="-1"></a>mat <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">2</span>)</span>
+<span id="cb81-2"><a href="#cb81-2" tabindex="-1"></a></span>
+<span id="cb81-3"><a href="#cb81-3" tabindex="-1"></a>?solve</span>
+<span id="cb81-4"><a href="#cb81-4" tabindex="-1"></a><span class="fu">solve</span>(mat) <span class="co">#inverse of mat</span></span></code></pre></div>
 <pre><code>##      [,1] [,2]
 ## [1,]   -2  1.5
 ## [2,]    1 -0.5</code></pre>
-<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" tabindex="-1"></a>mat <span class="sc">%*%</span> <span class="fu">solve</span>(mat) <span class="co"># identity matrix</span></span></code></pre></div>
+<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="#cb83-1" tabindex="-1"></a>mat <span class="sc">%*%</span> <span class="fu">solve</span>(mat) <span class="co"># identity matrix</span></span></code></pre></div>
 <pre><code>##      [,1] [,2]
 ## [1,]    1    0
 ## [2,]    0    1</code></pre>
@@ -764,11 +766,11 @@ solve()</li>
 <li>Lets create a data frame with 2 columns, Age (in years) and Height
 (in cm)</li>
 </ul>
-<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="#cb83-1" tabindex="-1"></a>my.data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>( <span class="st">&quot;Age&quot;</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">23</span>, <span class="dv">12</span>, <span class="dv">90</span>, <span class="dv">41</span>, <span class="dv">87</span>),</span>
-<span id="cb83-2"><a href="#cb83-2" tabindex="-1"></a>                       <span class="st">&quot;Height&quot;</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="fl">162.3</span>, <span class="fl">121.0</span>, <span class="fl">174.8</span>, <span class="fl">185.2</span>, <span class="fl">168.9</span>))</span>
-<span id="cb83-3"><a href="#cb83-3" tabindex="-1"></a></span>
-<span id="cb83-4"><a href="#cb83-4" tabindex="-1"></a><span class="co"># This will display your data frame in the console</span></span>
-<span id="cb83-5"><a href="#cb83-5" tabindex="-1"></a>my.data</span></code></pre></div>
+<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="#cb85-1" tabindex="-1"></a>my.data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>( <span class="st">&quot;Age&quot;</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">23</span>, <span class="dv">12</span>, <span class="dv">90</span>, <span class="dv">41</span>, <span class="dv">87</span>), </span>
+<span id="cb85-2"><a href="#cb85-2" tabindex="-1"></a>                       <span class="st">&quot;Height&quot;</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="fl">162.3</span>, <span class="fl">121.0</span>, <span class="fl">174.8</span>, <span class="fl">185.2</span>, <span class="fl">168.9</span>))</span>
+<span id="cb85-3"><a href="#cb85-3" tabindex="-1"></a></span>
+<span id="cb85-4"><a href="#cb85-4" tabindex="-1"></a><span class="co"># This will display your data frame in the console</span></span>
+<span id="cb85-5"><a href="#cb85-5" tabindex="-1"></a>my.data</span></code></pre></div>
 <pre><code>##   Age Height
 ## 1  23  162.3
 ## 2  12  121.0
@@ -778,712 +780,90 @@ solve()</li>
 <ul>
 <li>This is will display your data in a new window</li>
 </ul>
-<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="#cb85-1" tabindex="-1"></a><span class="fu">View</span>(my.data)</span></code></pre></div>
+<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="#cb87-1" tabindex="-1"></a><span class="fu">View</span>(my.data)</span></code></pre></div>
 <ul>
 <li>Equivalently, you can also click on the “my.data” row in the
 Environment pane</li>
 <li>We can reference the information in “Age” column in a few different
 ways. All of the following are equivalent</li>
 </ul>
-<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1" tabindex="-1"></a>my.data[ , <span class="dv">1</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1" tabindex="-1"></a>my.data[ , <span class="dv">1</span>]</span></code></pre></div>
 <pre><code>## [1] 23 12 90 41 87</code></pre>
-<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1" tabindex="-1"></a>my.data[ , <span class="st">&quot;Age&quot;</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="#cb90-1" tabindex="-1"></a>my.data[ , <span class="st">&quot;Age&quot;</span>]</span></code></pre></div>
 <pre><code>## [1] 23 12 90 41 87</code></pre>
-<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="#cb90-1" tabindex="-1"></a>my.data<span class="sc">$</span>Age</span></code></pre></div>
+<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="#cb92-1" tabindex="-1"></a>my.data<span class="sc">$</span>Age</span></code></pre></div>
 <pre><code>## [1] 23 12 90 41 87</code></pre>
-</div>
-<div id="packages-tidyverse" class="slide section level2">
-<h1>Packages + Tidyverse</h1>
-<ul>
-<li>You only need to install a package once (on every machine you’re
-on)</li>
-</ul>
-<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="#cb92-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>,<span class="at">repos =</span> <span class="st">&quot;http://cran.us.r-project.org&quot;</span>)</span></code></pre></div>
-<pre><code>## Installing package into &#39;C:/Users/SMukherjee/AppData/Local/R/win-library/4.2&#39;
-## (as &#39;lib&#39; is unspecified)</code></pre>
-<pre><code>## package &#39;tidyverse&#39; successfully unpacked and MD5 sums checked
-## 
-## The downloaded binary packages are in
-##  C:\Users\SMukherjee\AppData\Local\Temp\RtmpeMThmW\downloaded_packages</code></pre>
-<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="#cb95-1" tabindex="-1"></a><span class="do">## every time you want to use a function inside a package, you need to load the library</span></span>
-<span id="cb95-2"><a href="#cb95-2" tabindex="-1"></a><span class="fu">library</span>(tidyverse) <span class="co">#now we can use the tidyverse functions! </span></span></code></pre></div>
-<pre><code>## Warning: package &#39;tidyverse&#39; was built under R version 4.2.3</code></pre>
-<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 4.2.3</code></pre>
-<pre><code>## Warning: package &#39;tibble&#39; was built under R version 4.2.3</code></pre>
-<pre><code>## Warning: package &#39;tidyr&#39; was built under R version 4.2.3</code></pre>
-<pre><code>## Warning: package &#39;readr&#39; was built under R version 4.2.3</code></pre>
-<pre><code>## Warning: package &#39;purrr&#39; was built under R version 4.2.3</code></pre>
-<pre><code>## Warning: package &#39;dplyr&#39; was built under R version 4.2.3</code></pre>
-<pre><code>## Warning: package &#39;stringr&#39; was built under R version 4.2.3</code></pre>
-<pre><code>## Warning: package &#39;forcats&#39; was built under R version 4.2.3</code></pre>
-<pre><code>## Warning: package &#39;lubridate&#39; was built under R version 4.2.3</code></pre>
-<pre><code>## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-## ✔ dplyr     1.1.2     ✔ readr     2.1.4
-## ✔ forcats   1.0.0     ✔ stringr   1.5.0
-## ✔ ggplot2   3.4.2     ✔ tibble    3.2.1
-## ✔ lubridate 1.9.2     ✔ tidyr     1.3.0
-## ✔ purrr     1.0.1</code></pre>
-<pre><code>## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-## ✖ dplyr::filter() masks stats::filter()
-## ✖ dplyr::lag()    masks stats::lag()
-## ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
-<ul>
-<li>Before we get into functions in the tidyverse, we will introduce one
-more special operator in R</li>
-<li>The tidyverse package contains the <code>%&gt;%</code> (pipe)
-operator</li>
-<li>Pipe takes what ever is before the <code>%&gt;%</code> and inputs as
-the first element into whatever is after the <code>%&gt;%</code>.</li>
-</ul>
-</div>
-<div id="an-example-using-the-mean-function" class="slide section level2">
-<h1>An example using the mean function</h1>
-<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="#cb108-1" tabindex="-1"></a>?mean </span>
-<span id="cb108-2"><a href="#cb108-2" tabindex="-1"></a>numbers <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">8</span>,<span class="dv">23</span>,<span class="dv">45</span>,<span class="dv">67</span>)</span></code></pre></div>
-<p>-The following are equivalent - Method 1</p>
-<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="#cb109-1" tabindex="-1"></a><span class="fu">mean</span>(numbers)</span></code></pre></div>
-<pre><code>## [1] 22.14286</code></pre>
-<ul>
-<li>Method 2</li>
-</ul>
-<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="#cb111-1" tabindex="-1"></a>numbers <span class="sc">%&gt;%</span></span>
-<span id="cb111-2"><a href="#cb111-2" tabindex="-1"></a>  <span class="fu">mean</span>()</span></code></pre></div>
-<pre><code>## [1] 22.14286</code></pre>
-<ul>
-<li>Pipe is usually used when we have a series of operations we want to
-compute</li>
-<li>Lets use the iris data set as an example</li>
-</ul>
-<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="#cb113-1" tabindex="-1"></a>iris</span></code></pre></div>
-<pre><code>##     Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
-## 1            5.1         3.5          1.4         0.2     setosa
-## 2            4.9         3.0          1.4         0.2     setosa
-## 3            4.7         3.2          1.3         0.2     setosa
-## 4            4.6         3.1          1.5         0.2     setosa
-## 5            5.0         3.6          1.4         0.2     setosa
-## 6            5.4         3.9          1.7         0.4     setosa
-## 7            4.6         3.4          1.4         0.3     setosa
-## 8            5.0         3.4          1.5         0.2     setosa
-## 9            4.4         2.9          1.4         0.2     setosa
-## 10           4.9         3.1          1.5         0.1     setosa
-## 11           5.4         3.7          1.5         0.2     setosa
-## 12           4.8         3.4          1.6         0.2     setosa
-## 13           4.8         3.0          1.4         0.1     setosa
-## 14           4.3         3.0          1.1         0.1     setosa
-## 15           5.8         4.0          1.2         0.2     setosa
-## 16           5.7         4.4          1.5         0.4     setosa
-## 17           5.4         3.9          1.3         0.4     setosa
-## 18           5.1         3.5          1.4         0.3     setosa
-## 19           5.7         3.8          1.7         0.3     setosa
-## 20           5.1         3.8          1.5         0.3     setosa
-## 21           5.4         3.4          1.7         0.2     setosa
-## 22           5.1         3.7          1.5         0.4     setosa
-## 23           4.6         3.6          1.0         0.2     setosa
-## 24           5.1         3.3          1.7         0.5     setosa
-## 25           4.8         3.4          1.9         0.2     setosa
-## 26           5.0         3.0          1.6         0.2     setosa
-## 27           5.0         3.4          1.6         0.4     setosa
-## 28           5.2         3.5          1.5         0.2     setosa
-## 29           5.2         3.4          1.4         0.2     setosa
-## 30           4.7         3.2          1.6         0.2     setosa
-## 31           4.8         3.1          1.6         0.2     setosa
-## 32           5.4         3.4          1.5         0.4     setosa
-## 33           5.2         4.1          1.5         0.1     setosa
-## 34           5.5         4.2          1.4         0.2     setosa
-## 35           4.9         3.1          1.5         0.2     setosa
-## 36           5.0         3.2          1.2         0.2     setosa
-## 37           5.5         3.5          1.3         0.2     setosa
-## 38           4.9         3.6          1.4         0.1     setosa
-## 39           4.4         3.0          1.3         0.2     setosa
-## 40           5.1         3.4          1.5         0.2     setosa
-## 41           5.0         3.5          1.3         0.3     setosa
-## 42           4.5         2.3          1.3         0.3     setosa
-## 43           4.4         3.2          1.3         0.2     setosa
-## 44           5.0         3.5          1.6         0.6     setosa
-## 45           5.1         3.8          1.9         0.4     setosa
-## 46           4.8         3.0          1.4         0.3     setosa
-## 47           5.1         3.8          1.6         0.2     setosa
-## 48           4.6         3.2          1.4         0.2     setosa
-## 49           5.3         3.7          1.5         0.2     setosa
-## 50           5.0         3.3          1.4         0.2     setosa
-## 51           7.0         3.2          4.7         1.4 versicolor
-## 52           6.4         3.2          4.5         1.5 versicolor
-## 53           6.9         3.1          4.9         1.5 versicolor
-## 54           5.5         2.3          4.0         1.3 versicolor
-## 55           6.5         2.8          4.6         1.5 versicolor
-## 56           5.7         2.8          4.5         1.3 versicolor
-## 57           6.3         3.3          4.7         1.6 versicolor
-## 58           4.9         2.4          3.3         1.0 versicolor
-## 59           6.6         2.9          4.6         1.3 versicolor
-## 60           5.2         2.7          3.9         1.4 versicolor
-## 61           5.0         2.0          3.5         1.0 versicolor
-## 62           5.9         3.0          4.2         1.5 versicolor
-## 63           6.0         2.2          4.0         1.0 versicolor
-## 64           6.1         2.9          4.7         1.4 versicolor
-## 65           5.6         2.9          3.6         1.3 versicolor
-## 66           6.7         3.1          4.4         1.4 versicolor
-## 67           5.6         3.0          4.5         1.5 versicolor
-## 68           5.8         2.7          4.1         1.0 versicolor
-## 69           6.2         2.2          4.5         1.5 versicolor
-## 70           5.6         2.5          3.9         1.1 versicolor
-## 71           5.9         3.2          4.8         1.8 versicolor
-## 72           6.1         2.8          4.0         1.3 versicolor
-## 73           6.3         2.5          4.9         1.5 versicolor
-## 74           6.1         2.8          4.7         1.2 versicolor
-## 75           6.4         2.9          4.3         1.3 versicolor
-## 76           6.6         3.0          4.4         1.4 versicolor
-## 77           6.8         2.8          4.8         1.4 versicolor
-## 78           6.7         3.0          5.0         1.7 versicolor
-## 79           6.0         2.9          4.5         1.5 versicolor
-## 80           5.7         2.6          3.5         1.0 versicolor
-## 81           5.5         2.4          3.8         1.1 versicolor
-## 82           5.5         2.4          3.7         1.0 versicolor
-## 83           5.8         2.7          3.9         1.2 versicolor
-## 84           6.0         2.7          5.1         1.6 versicolor
-## 85           5.4         3.0          4.5         1.5 versicolor
-## 86           6.0         3.4          4.5         1.6 versicolor
-## 87           6.7         3.1          4.7         1.5 versicolor
-## 88           6.3         2.3          4.4         1.3 versicolor
-## 89           5.6         3.0          4.1         1.3 versicolor
-## 90           5.5         2.5          4.0         1.3 versicolor
-## 91           5.5         2.6          4.4         1.2 versicolor
-## 92           6.1         3.0          4.6         1.4 versicolor
-## 93           5.8         2.6          4.0         1.2 versicolor
-## 94           5.0         2.3          3.3         1.0 versicolor
-## 95           5.6         2.7          4.2         1.3 versicolor
-## 96           5.7         3.0          4.2         1.2 versicolor
-## 97           5.7         2.9          4.2         1.3 versicolor
-## 98           6.2         2.9          4.3         1.3 versicolor
-## 99           5.1         2.5          3.0         1.1 versicolor
-## 100          5.7         2.8          4.1         1.3 versicolor
-## 101          6.3         3.3          6.0         2.5  virginica
-## 102          5.8         2.7          5.1         1.9  virginica
-## 103          7.1         3.0          5.9         2.1  virginica
-## 104          6.3         2.9          5.6         1.8  virginica
-## 105          6.5         3.0          5.8         2.2  virginica
-## 106          7.6         3.0          6.6         2.1  virginica
-## 107          4.9         2.5          4.5         1.7  virginica
-## 108          7.3         2.9          6.3         1.8  virginica
-## 109          6.7         2.5          5.8         1.8  virginica
-## 110          7.2         3.6          6.1         2.5  virginica
-## 111          6.5         3.2          5.1         2.0  virginica
-## 112          6.4         2.7          5.3         1.9  virginica
-## 113          6.8         3.0          5.5         2.1  virginica
-## 114          5.7         2.5          5.0         2.0  virginica
-## 115          5.8         2.8          5.1         2.4  virginica
-## 116          6.4         3.2          5.3         2.3  virginica
-## 117          6.5         3.0          5.5         1.8  virginica
-## 118          7.7         3.8          6.7         2.2  virginica
-## 119          7.7         2.6          6.9         2.3  virginica
-## 120          6.0         2.2          5.0         1.5  virginica
-## 121          6.9         3.2          5.7         2.3  virginica
-## 122          5.6         2.8          4.9         2.0  virginica
-## 123          7.7         2.8          6.7         2.0  virginica
-## 124          6.3         2.7          4.9         1.8  virginica
-## 125          6.7         3.3          5.7         2.1  virginica
-## 126          7.2         3.2          6.0         1.8  virginica
-## 127          6.2         2.8          4.8         1.8  virginica
-## 128          6.1         3.0          4.9         1.8  virginica
-## 129          6.4         2.8          5.6         2.1  virginica
-## 130          7.2         3.0          5.8         1.6  virginica
-## 131          7.4         2.8          6.1         1.9  virginica
-## 132          7.9         3.8          6.4         2.0  virginica
-## 133          6.4         2.8          5.6         2.2  virginica
-## 134          6.3         2.8          5.1         1.5  virginica
-## 135          6.1         2.6          5.6         1.4  virginica
-## 136          7.7         3.0          6.1         2.3  virginica
-## 137          6.3         3.4          5.6         2.4  virginica
-## 138          6.4         3.1          5.5         1.8  virginica
-## 139          6.0         3.0          4.8         1.8  virginica
-## 140          6.9         3.1          5.4         2.1  virginica
-## 141          6.7         3.1          5.6         2.4  virginica
-## 142          6.9         3.1          5.1         2.3  virginica
-## 143          5.8         2.7          5.1         1.9  virginica
-## 144          6.8         3.2          5.9         2.3  virginica
-## 145          6.7         3.3          5.7         2.5  virginica
-## 146          6.7         3.0          5.2         2.3  virginica
-## 147          6.3         2.5          5.0         1.9  virginica
-## 148          6.5         3.0          5.2         2.0  virginica
-## 149          6.2         3.4          5.4         2.3  virginica
-## 150          5.9         3.0          5.1         1.8  virginica</code></pre>
-<ul>
-<li>Say I want to arrange the rows in this data set by the
-Sepal.Length.</li>
-<li>The following are equivalent</li>
-<li>Method 1</li>
-</ul>
-<div class="sourceCode" id="cb115"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb115-1"><a href="#cb115-1" tabindex="-1"></a><span class="fu">arrange</span>(iris, Sepal.Length)</span></code></pre></div>
-<pre><code>##     Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
-## 1            4.3         3.0          1.1         0.1     setosa
-## 2            4.4         2.9          1.4         0.2     setosa
-## 3            4.4         3.0          1.3         0.2     setosa
-## 4            4.4         3.2          1.3         0.2     setosa
-## 5            4.5         2.3          1.3         0.3     setosa
-## 6            4.6         3.1          1.5         0.2     setosa
-## 7            4.6         3.4          1.4         0.3     setosa
-## 8            4.6         3.6          1.0         0.2     setosa
-## 9            4.6         3.2          1.4         0.2     setosa
-## 10           4.7         3.2          1.3         0.2     setosa
-## 11           4.7         3.2          1.6         0.2     setosa
-## 12           4.8         3.4          1.6         0.2     setosa
-## 13           4.8         3.0          1.4         0.1     setosa
-## 14           4.8         3.4          1.9         0.2     setosa
-## 15           4.8         3.1          1.6         0.2     setosa
-## 16           4.8         3.0          1.4         0.3     setosa
-## 17           4.9         3.0          1.4         0.2     setosa
-## 18           4.9         3.1          1.5         0.1     setosa
-## 19           4.9         3.1          1.5         0.2     setosa
-## 20           4.9         3.6          1.4         0.1     setosa
-## 21           4.9         2.4          3.3         1.0 versicolor
-## 22           4.9         2.5          4.5         1.7  virginica
-## 23           5.0         3.6          1.4         0.2     setosa
-## 24           5.0         3.4          1.5         0.2     setosa
-## 25           5.0         3.0          1.6         0.2     setosa
-## 26           5.0         3.4          1.6         0.4     setosa
-## 27           5.0         3.2          1.2         0.2     setosa
-## 28           5.0         3.5          1.3         0.3     setosa
-## 29           5.0         3.5          1.6         0.6     setosa
-## 30           5.0         3.3          1.4         0.2     setosa
-## 31           5.0         2.0          3.5         1.0 versicolor
-## 32           5.0         2.3          3.3         1.0 versicolor
-## 33           5.1         3.5          1.4         0.2     setosa
-## 34           5.1         3.5          1.4         0.3     setosa
-## 35           5.1         3.8          1.5         0.3     setosa
-## 36           5.1         3.7          1.5         0.4     setosa
-## 37           5.1         3.3          1.7         0.5     setosa
-## 38           5.1         3.4          1.5         0.2     setosa
-## 39           5.1         3.8          1.9         0.4     setosa
-## 40           5.1         3.8          1.6         0.2     setosa
-## 41           5.1         2.5          3.0         1.1 versicolor
-## 42           5.2         3.5          1.5         0.2     setosa
-## 43           5.2         3.4          1.4         0.2     setosa
-## 44           5.2         4.1          1.5         0.1     setosa
-## 45           5.2         2.7          3.9         1.4 versicolor
-## 46           5.3         3.7          1.5         0.2     setosa
-## 47           5.4         3.9          1.7         0.4     setosa
-## 48           5.4         3.7          1.5         0.2     setosa
-## 49           5.4         3.9          1.3         0.4     setosa
-## 50           5.4         3.4          1.7         0.2     setosa
-## 51           5.4         3.4          1.5         0.4     setosa
-## 52           5.4         3.0          4.5         1.5 versicolor
-## 53           5.5         4.2          1.4         0.2     setosa
-## 54           5.5         3.5          1.3         0.2     setosa
-## 55           5.5         2.3          4.0         1.3 versicolor
-## 56           5.5         2.4          3.8         1.1 versicolor
-## 57           5.5         2.4          3.7         1.0 versicolor
-## 58           5.5         2.5          4.0         1.3 versicolor
-## 59           5.5         2.6          4.4         1.2 versicolor
-## 60           5.6         2.9          3.6         1.3 versicolor
-## 61           5.6         3.0          4.5         1.5 versicolor
-## 62           5.6         2.5          3.9         1.1 versicolor
-## 63           5.6         3.0          4.1         1.3 versicolor
-## 64           5.6         2.7          4.2         1.3 versicolor
-## 65           5.6         2.8          4.9         2.0  virginica
-## 66           5.7         4.4          1.5         0.4     setosa
-## 67           5.7         3.8          1.7         0.3     setosa
-## 68           5.7         2.8          4.5         1.3 versicolor
-## 69           5.7         2.6          3.5         1.0 versicolor
-## 70           5.7         3.0          4.2         1.2 versicolor
-## 71           5.7         2.9          4.2         1.3 versicolor
-## 72           5.7         2.8          4.1         1.3 versicolor
-## 73           5.7         2.5          5.0         2.0  virginica
-## 74           5.8         4.0          1.2         0.2     setosa
-## 75           5.8         2.7          4.1         1.0 versicolor
-## 76           5.8         2.7          3.9         1.2 versicolor
-## 77           5.8         2.6          4.0         1.2 versicolor
-## 78           5.8         2.7          5.1         1.9  virginica
-## 79           5.8         2.8          5.1         2.4  virginica
-## 80           5.8         2.7          5.1         1.9  virginica
-## 81           5.9         3.0          4.2         1.5 versicolor
-## 82           5.9         3.2          4.8         1.8 versicolor
-## 83           5.9         3.0          5.1         1.8  virginica
-## 84           6.0         2.2          4.0         1.0 versicolor
-## 85           6.0         2.9          4.5         1.5 versicolor
-## 86           6.0         2.7          5.1         1.6 versicolor
-## 87           6.0         3.4          4.5         1.6 versicolor
-## 88           6.0         2.2          5.0         1.5  virginica
-## 89           6.0         3.0          4.8         1.8  virginica
-## 90           6.1         2.9          4.7         1.4 versicolor
-## 91           6.1         2.8          4.0         1.3 versicolor
-## 92           6.1         2.8          4.7         1.2 versicolor
-## 93           6.1         3.0          4.6         1.4 versicolor
-## 94           6.1         3.0          4.9         1.8  virginica
-## 95           6.1         2.6          5.6         1.4  virginica
-## 96           6.2         2.2          4.5         1.5 versicolor
-## 97           6.2         2.9          4.3         1.3 versicolor
-## 98           6.2         2.8          4.8         1.8  virginica
-## 99           6.2         3.4          5.4         2.3  virginica
-## 100          6.3         3.3          4.7         1.6 versicolor
-## 101          6.3         2.5          4.9         1.5 versicolor
-## 102          6.3         2.3          4.4         1.3 versicolor
-## 103          6.3         3.3          6.0         2.5  virginica
-## 104          6.3         2.9          5.6         1.8  virginica
-## 105          6.3         2.7          4.9         1.8  virginica
-## 106          6.3         2.8          5.1         1.5  virginica
-## 107          6.3         3.4          5.6         2.4  virginica
-## 108          6.3         2.5          5.0         1.9  virginica
-## 109          6.4         3.2          4.5         1.5 versicolor
-## 110          6.4         2.9          4.3         1.3 versicolor
-## 111          6.4         2.7          5.3         1.9  virginica
-## 112          6.4         3.2          5.3         2.3  virginica
-## 113          6.4         2.8          5.6         2.1  virginica
-## 114          6.4         2.8          5.6         2.2  virginica
-## 115          6.4         3.1          5.5         1.8  virginica
-## 116          6.5         2.8          4.6         1.5 versicolor
-## 117          6.5         3.0          5.8         2.2  virginica
-## 118          6.5         3.2          5.1         2.0  virginica
-## 119          6.5         3.0          5.5         1.8  virginica
-## 120          6.5         3.0          5.2         2.0  virginica
-## 121          6.6         2.9          4.6         1.3 versicolor
-## 122          6.6         3.0          4.4         1.4 versicolor
-## 123          6.7         3.1          4.4         1.4 versicolor
-## 124          6.7         3.0          5.0         1.7 versicolor
-## 125          6.7         3.1          4.7         1.5 versicolor
-## 126          6.7         2.5          5.8         1.8  virginica
-## 127          6.7         3.3          5.7         2.1  virginica
-## 128          6.7         3.1          5.6         2.4  virginica
-## 129          6.7         3.3          5.7         2.5  virginica
-## 130          6.7         3.0          5.2         2.3  virginica
-## 131          6.8         2.8          4.8         1.4 versicolor
-## 132          6.8         3.0          5.5         2.1  virginica
-## 133          6.8         3.2          5.9         2.3  virginica
-## 134          6.9         3.1          4.9         1.5 versicolor
-## 135          6.9         3.2          5.7         2.3  virginica
-## 136          6.9         3.1          5.4         2.1  virginica
-## 137          6.9         3.1          5.1         2.3  virginica
-## 138          7.0         3.2          4.7         1.4 versicolor
-## 139          7.1         3.0          5.9         2.1  virginica
-## 140          7.2         3.6          6.1         2.5  virginica
-## 141          7.2         3.2          6.0         1.8  virginica
-## 142          7.2         3.0          5.8         1.6  virginica
-## 143          7.3         2.9          6.3         1.8  virginica
-## 144          7.4         2.8          6.1         1.9  virginica
-## 145          7.6         3.0          6.6         2.1  virginica
-## 146          7.7         3.8          6.7         2.2  virginica
-## 147          7.7         2.6          6.9         2.3  virginica
-## 148          7.7         2.8          6.7         2.0  virginica
-## 149          7.7         3.0          6.1         2.3  virginica
-## 150          7.9         3.8          6.4         2.0  virginica</code></pre>
-<ul>
-<li>Method 2</li>
-</ul>
-<div class="sourceCode" id="cb117"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb117-1"><a href="#cb117-1" tabindex="-1"></a>iris <span class="sc">%&gt;%</span></span>
-<span id="cb117-2"><a href="#cb117-2" tabindex="-1"></a>  <span class="fu">arrange</span>(Sepal.Length)</span></code></pre></div>
-<pre><code>##     Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
-## 1            4.3         3.0          1.1         0.1     setosa
-## 2            4.4         2.9          1.4         0.2     setosa
-## 3            4.4         3.0          1.3         0.2     setosa
-## 4            4.4         3.2          1.3         0.2     setosa
-## 5            4.5         2.3          1.3         0.3     setosa
-## 6            4.6         3.1          1.5         0.2     setosa
-## 7            4.6         3.4          1.4         0.3     setosa
-## 8            4.6         3.6          1.0         0.2     setosa
-## 9            4.6         3.2          1.4         0.2     setosa
-## 10           4.7         3.2          1.3         0.2     setosa
-## 11           4.7         3.2          1.6         0.2     setosa
-## 12           4.8         3.4          1.6         0.2     setosa
-## 13           4.8         3.0          1.4         0.1     setosa
-## 14           4.8         3.4          1.9         0.2     setosa
-## 15           4.8         3.1          1.6         0.2     setosa
-## 16           4.8         3.0          1.4         0.3     setosa
-## 17           4.9         3.0          1.4         0.2     setosa
-## 18           4.9         3.1          1.5         0.1     setosa
-## 19           4.9         3.1          1.5         0.2     setosa
-## 20           4.9         3.6          1.4         0.1     setosa
-## 21           4.9         2.4          3.3         1.0 versicolor
-## 22           4.9         2.5          4.5         1.7  virginica
-## 23           5.0         3.6          1.4         0.2     setosa
-## 24           5.0         3.4          1.5         0.2     setosa
-## 25           5.0         3.0          1.6         0.2     setosa
-## 26           5.0         3.4          1.6         0.4     setosa
-## 27           5.0         3.2          1.2         0.2     setosa
-## 28           5.0         3.5          1.3         0.3     setosa
-## 29           5.0         3.5          1.6         0.6     setosa
-## 30           5.0         3.3          1.4         0.2     setosa
-## 31           5.0         2.0          3.5         1.0 versicolor
-## 32           5.0         2.3          3.3         1.0 versicolor
-## 33           5.1         3.5          1.4         0.2     setosa
-## 34           5.1         3.5          1.4         0.3     setosa
-## 35           5.1         3.8          1.5         0.3     setosa
-## 36           5.1         3.7          1.5         0.4     setosa
-## 37           5.1         3.3          1.7         0.5     setosa
-## 38           5.1         3.4          1.5         0.2     setosa
-## 39           5.1         3.8          1.9         0.4     setosa
-## 40           5.1         3.8          1.6         0.2     setosa
-## 41           5.1         2.5          3.0         1.1 versicolor
-## 42           5.2         3.5          1.5         0.2     setosa
-## 43           5.2         3.4          1.4         0.2     setosa
-## 44           5.2         4.1          1.5         0.1     setosa
-## 45           5.2         2.7          3.9         1.4 versicolor
-## 46           5.3         3.7          1.5         0.2     setosa
-## 47           5.4         3.9          1.7         0.4     setosa
-## 48           5.4         3.7          1.5         0.2     setosa
-## 49           5.4         3.9          1.3         0.4     setosa
-## 50           5.4         3.4          1.7         0.2     setosa
-## 51           5.4         3.4          1.5         0.4     setosa
-## 52           5.4         3.0          4.5         1.5 versicolor
-## 53           5.5         4.2          1.4         0.2     setosa
-## 54           5.5         3.5          1.3         0.2     setosa
-## 55           5.5         2.3          4.0         1.3 versicolor
-## 56           5.5         2.4          3.8         1.1 versicolor
-## 57           5.5         2.4          3.7         1.0 versicolor
-## 58           5.5         2.5          4.0         1.3 versicolor
-## 59           5.5         2.6          4.4         1.2 versicolor
-## 60           5.6         2.9          3.6         1.3 versicolor
-## 61           5.6         3.0          4.5         1.5 versicolor
-## 62           5.6         2.5          3.9         1.1 versicolor
-## 63           5.6         3.0          4.1         1.3 versicolor
-## 64           5.6         2.7          4.2         1.3 versicolor
-## 65           5.6         2.8          4.9         2.0  virginica
-## 66           5.7         4.4          1.5         0.4     setosa
-## 67           5.7         3.8          1.7         0.3     setosa
-## 68           5.7         2.8          4.5         1.3 versicolor
-## 69           5.7         2.6          3.5         1.0 versicolor
-## 70           5.7         3.0          4.2         1.2 versicolor
-## 71           5.7         2.9          4.2         1.3 versicolor
-## 72           5.7         2.8          4.1         1.3 versicolor
-## 73           5.7         2.5          5.0         2.0  virginica
-## 74           5.8         4.0          1.2         0.2     setosa
-## 75           5.8         2.7          4.1         1.0 versicolor
-## 76           5.8         2.7          3.9         1.2 versicolor
-## 77           5.8         2.6          4.0         1.2 versicolor
-## 78           5.8         2.7          5.1         1.9  virginica
-## 79           5.8         2.8          5.1         2.4  virginica
-## 80           5.8         2.7          5.1         1.9  virginica
-## 81           5.9         3.0          4.2         1.5 versicolor
-## 82           5.9         3.2          4.8         1.8 versicolor
-## 83           5.9         3.0          5.1         1.8  virginica
-## 84           6.0         2.2          4.0         1.0 versicolor
-## 85           6.0         2.9          4.5         1.5 versicolor
-## 86           6.0         2.7          5.1         1.6 versicolor
-## 87           6.0         3.4          4.5         1.6 versicolor
-## 88           6.0         2.2          5.0         1.5  virginica
-## 89           6.0         3.0          4.8         1.8  virginica
-## 90           6.1         2.9          4.7         1.4 versicolor
-## 91           6.1         2.8          4.0         1.3 versicolor
-## 92           6.1         2.8          4.7         1.2 versicolor
-## 93           6.1         3.0          4.6         1.4 versicolor
-## 94           6.1         3.0          4.9         1.8  virginica
-## 95           6.1         2.6          5.6         1.4  virginica
-## 96           6.2         2.2          4.5         1.5 versicolor
-## 97           6.2         2.9          4.3         1.3 versicolor
-## 98           6.2         2.8          4.8         1.8  virginica
-## 99           6.2         3.4          5.4         2.3  virginica
-## 100          6.3         3.3          4.7         1.6 versicolor
-## 101          6.3         2.5          4.9         1.5 versicolor
-## 102          6.3         2.3          4.4         1.3 versicolor
-## 103          6.3         3.3          6.0         2.5  virginica
-## 104          6.3         2.9          5.6         1.8  virginica
-## 105          6.3         2.7          4.9         1.8  virginica
-## 106          6.3         2.8          5.1         1.5  virginica
-## 107          6.3         3.4          5.6         2.4  virginica
-## 108          6.3         2.5          5.0         1.9  virginica
-## 109          6.4         3.2          4.5         1.5 versicolor
-## 110          6.4         2.9          4.3         1.3 versicolor
-## 111          6.4         2.7          5.3         1.9  virginica
-## 112          6.4         3.2          5.3         2.3  virginica
-## 113          6.4         2.8          5.6         2.1  virginica
-## 114          6.4         2.8          5.6         2.2  virginica
-## 115          6.4         3.1          5.5         1.8  virginica
-## 116          6.5         2.8          4.6         1.5 versicolor
-## 117          6.5         3.0          5.8         2.2  virginica
-## 118          6.5         3.2          5.1         2.0  virginica
-## 119          6.5         3.0          5.5         1.8  virginica
-## 120          6.5         3.0          5.2         2.0  virginica
-## 121          6.6         2.9          4.6         1.3 versicolor
-## 122          6.6         3.0          4.4         1.4 versicolor
-## 123          6.7         3.1          4.4         1.4 versicolor
-## 124          6.7         3.0          5.0         1.7 versicolor
-## 125          6.7         3.1          4.7         1.5 versicolor
-## 126          6.7         2.5          5.8         1.8  virginica
-## 127          6.7         3.3          5.7         2.1  virginica
-## 128          6.7         3.1          5.6         2.4  virginica
-## 129          6.7         3.3          5.7         2.5  virginica
-## 130          6.7         3.0          5.2         2.3  virginica
-## 131          6.8         2.8          4.8         1.4 versicolor
-## 132          6.8         3.0          5.5         2.1  virginica
-## 133          6.8         3.2          5.9         2.3  virginica
-## 134          6.9         3.1          4.9         1.5 versicolor
-## 135          6.9         3.2          5.7         2.3  virginica
-## 136          6.9         3.1          5.4         2.1  virginica
-## 137          6.9         3.1          5.1         2.3  virginica
-## 138          7.0         3.2          4.7         1.4 versicolor
-## 139          7.1         3.0          5.9         2.1  virginica
-## 140          7.2         3.6          6.1         2.5  virginica
-## 141          7.2         3.2          6.0         1.8  virginica
-## 142          7.2         3.0          5.8         1.6  virginica
-## 143          7.3         2.9          6.3         1.8  virginica
-## 144          7.4         2.8          6.1         1.9  virginica
-## 145          7.6         3.0          6.6         2.1  virginica
-## 146          7.7         3.8          6.7         2.2  virginica
-## 147          7.7         2.6          6.9         2.3  virginica
-## 148          7.7         2.8          6.7         2.0  virginica
-## 149          7.7         3.0          6.1         2.3  virginica
-## 150          7.9         3.8          6.4         2.0  virginica</code></pre>
-<ul>
-<li>But now say we only want to keep rows with Sepal.Width &gt; 3 AND
-arrange the table by Sepal.Length</li>
-<li>The following are equivalent</li>
-<li>Method 1</li>
-</ul>
-<div class="sourceCode" id="cb119"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb119-1"><a href="#cb119-1" tabindex="-1"></a>temp1 <span class="ot">&lt;-</span> <span class="fu">arrange</span>(iris, Sepal.Length)</span>
-<span id="cb119-2"><a href="#cb119-2" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">filter</span>(temp1, Sepal.Width <span class="sc">&gt;</span> <span class="dv">3</span>)</span>
-<span id="cb119-3"><a href="#cb119-3" tabindex="-1"></a>result </span></code></pre></div>
-<pre><code>##    Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
-## 1           4.4         3.2          1.3         0.2     setosa
-## 2           4.6         3.1          1.5         0.2     setosa
-## 3           4.6         3.4          1.4         0.3     setosa
-## 4           4.6         3.6          1.0         0.2     setosa
-## 5           4.6         3.2          1.4         0.2     setosa
-## 6           4.7         3.2          1.3         0.2     setosa
-## 7           4.7         3.2          1.6         0.2     setosa
-## 8           4.8         3.4          1.6         0.2     setosa
-## 9           4.8         3.4          1.9         0.2     setosa
-## 10          4.8         3.1          1.6         0.2     setosa
-## 11          4.9         3.1          1.5         0.1     setosa
-## 12          4.9         3.1          1.5         0.2     setosa
-## 13          4.9         3.6          1.4         0.1     setosa
-## 14          5.0         3.6          1.4         0.2     setosa
-## 15          5.0         3.4          1.5         0.2     setosa
-## 16          5.0         3.4          1.6         0.4     setosa
-## 17          5.0         3.2          1.2         0.2     setosa
-## 18          5.0         3.5          1.3         0.3     setosa
-## 19          5.0         3.5          1.6         0.6     setosa
-## 20          5.0         3.3          1.4         0.2     setosa
-## 21          5.1         3.5          1.4         0.2     setosa
-## 22          5.1         3.5          1.4         0.3     setosa
-## 23          5.1         3.8          1.5         0.3     setosa
-## 24          5.1         3.7          1.5         0.4     setosa
-## 25          5.1         3.3          1.7         0.5     setosa
-## 26          5.1         3.4          1.5         0.2     setosa
-## 27          5.1         3.8          1.9         0.4     setosa
-## 28          5.1         3.8          1.6         0.2     setosa
-## 29          5.2         3.5          1.5         0.2     setosa
-## 30          5.2         3.4          1.4         0.2     setosa
-## 31          5.2         4.1          1.5         0.1     setosa
-## 32          5.3         3.7          1.5         0.2     setosa
-## 33          5.4         3.9          1.7         0.4     setosa
-## 34          5.4         3.7          1.5         0.2     setosa
-## 35          5.4         3.9          1.3         0.4     setosa
-## 36          5.4         3.4          1.7         0.2     setosa
-## 37          5.4         3.4          1.5         0.4     setosa
-## 38          5.5         4.2          1.4         0.2     setosa
-## 39          5.5         3.5          1.3         0.2     setosa
-## 40          5.7         4.4          1.5         0.4     setosa
-## 41          5.7         3.8          1.7         0.3     setosa
-## 42          5.8         4.0          1.2         0.2     setosa
-## 43          5.9         3.2          4.8         1.8 versicolor
-## 44          6.0         3.4          4.5         1.6 versicolor
-## 45          6.2         3.4          5.4         2.3  virginica
-## 46          6.3         3.3          4.7         1.6 versicolor
-## 47          6.3         3.3          6.0         2.5  virginica
-## 48          6.3         3.4          5.6         2.4  virginica
-## 49          6.4         3.2          4.5         1.5 versicolor
-## 50          6.4         3.2          5.3         2.3  virginica
-## 51          6.4         3.1          5.5         1.8  virginica
-## 52          6.5         3.2          5.1         2.0  virginica
-## 53          6.7         3.1          4.4         1.4 versicolor
-## 54          6.7         3.1          4.7         1.5 versicolor
-## 55          6.7         3.3          5.7         2.1  virginica
-## 56          6.7         3.1          5.6         2.4  virginica
-## 57          6.7         3.3          5.7         2.5  virginica
-## 58          6.8         3.2          5.9         2.3  virginica
-## 59          6.9         3.1          4.9         1.5 versicolor
-## 60          6.9         3.2          5.7         2.3  virginica
-## 61          6.9         3.1          5.4         2.1  virginica
-## 62          6.9         3.1          5.1         2.3  virginica
-## 63          7.0         3.2          4.7         1.4 versicolor
-## 64          7.2         3.6          6.1         2.5  virginica
-## 65          7.2         3.2          6.0         1.8  virginica
-## 66          7.7         3.8          6.7         2.2  virginica
-## 67          7.9         3.8          6.4         2.0  virginica</code></pre>
-<ul>
-<li>Method 2</li>
-</ul>
-<div class="sourceCode" id="cb121"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb121-1"><a href="#cb121-1" tabindex="-1"></a>iris <span class="sc">%&gt;%</span></span>
-<span id="cb121-2"><a href="#cb121-2" tabindex="-1"></a>  <span class="fu">arrange</span>(Sepal.Length) <span class="sc">%&gt;%</span></span>
-<span id="cb121-3"><a href="#cb121-3" tabindex="-1"></a>  <span class="fu">filter</span>(Sepal.Width <span class="sc">&gt;</span> <span class="dv">3</span>)</span></code></pre></div>
-<pre><code>##    Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
-## 1           4.4         3.2          1.3         0.2     setosa
-## 2           4.6         3.1          1.5         0.2     setosa
-## 3           4.6         3.4          1.4         0.3     setosa
-## 4           4.6         3.6          1.0         0.2     setosa
-## 5           4.6         3.2          1.4         0.2     setosa
-## 6           4.7         3.2          1.3         0.2     setosa
-## 7           4.7         3.2          1.6         0.2     setosa
-## 8           4.8         3.4          1.6         0.2     setosa
-## 9           4.8         3.4          1.9         0.2     setosa
-## 10          4.8         3.1          1.6         0.2     setosa
-## 11          4.9         3.1          1.5         0.1     setosa
-## 12          4.9         3.1          1.5         0.2     setosa
-## 13          4.9         3.6          1.4         0.1     setosa
-## 14          5.0         3.6          1.4         0.2     setosa
-## 15          5.0         3.4          1.5         0.2     setosa
-## 16          5.0         3.4          1.6         0.4     setosa
-## 17          5.0         3.2          1.2         0.2     setosa
-## 18          5.0         3.5          1.3         0.3     setosa
-## 19          5.0         3.5          1.6         0.6     setosa
-## 20          5.0         3.3          1.4         0.2     setosa
-## 21          5.1         3.5          1.4         0.2     setosa
-## 22          5.1         3.5          1.4         0.3     setosa
-## 23          5.1         3.8          1.5         0.3     setosa
-## 24          5.1         3.7          1.5         0.4     setosa
-## 25          5.1         3.3          1.7         0.5     setosa
-## 26          5.1         3.4          1.5         0.2     setosa
-## 27          5.1         3.8          1.9         0.4     setosa
-## 28          5.1         3.8          1.6         0.2     setosa
-## 29          5.2         3.5          1.5         0.2     setosa
-## 30          5.2         3.4          1.4         0.2     setosa
-## 31          5.2         4.1          1.5         0.1     setosa
-## 32          5.3         3.7          1.5         0.2     setosa
-## 33          5.4         3.9          1.7         0.4     setosa
-## 34          5.4         3.7          1.5         0.2     setosa
-## 35          5.4         3.9          1.3         0.4     setosa
-## 36          5.4         3.4          1.7         0.2     setosa
-## 37          5.4         3.4          1.5         0.4     setosa
-## 38          5.5         4.2          1.4         0.2     setosa
-## 39          5.5         3.5          1.3         0.2     setosa
-## 40          5.7         4.4          1.5         0.4     setosa
-## 41          5.7         3.8          1.7         0.3     setosa
-## 42          5.8         4.0          1.2         0.2     setosa
-## 43          5.9         3.2          4.8         1.8 versicolor
-## 44          6.0         3.4          4.5         1.6 versicolor
-## 45          6.2         3.4          5.4         2.3  virginica
-## 46          6.3         3.3          4.7         1.6 versicolor
-## 47          6.3         3.3          6.0         2.5  virginica
-## 48          6.3         3.4          5.6         2.4  virginica
-## 49          6.4         3.2          4.5         1.5 versicolor
-## 50          6.4         3.2          5.3         2.3  virginica
-## 51          6.4         3.1          5.5         1.8  virginica
-## 52          6.5         3.2          5.1         2.0  virginica
-## 53          6.7         3.1          4.4         1.4 versicolor
-## 54          6.7         3.1          4.7         1.5 versicolor
-## 55          6.7         3.3          5.7         2.1  virginica
-## 56          6.7         3.1          5.6         2.4  virginica
-## 57          6.7         3.3          5.7         2.5  virginica
-## 58          6.8         3.2          5.9         2.3  virginica
-## 59          6.9         3.1          4.9         1.5 versicolor
-## 60          6.9         3.2          5.7         2.3  virginica
-## 61          6.9         3.1          5.4         2.1  virginica
-## 62          6.9         3.1          5.1         2.3  virginica
-## 63          7.0         3.2          4.7         1.4 versicolor
-## 64          7.2         3.6          6.1         2.5  virginica
-## 65          7.2         3.2          6.0         1.8  virginica
-## 66          7.7         3.8          6.7         2.2  virginica
-## 67          7.9         3.8          6.4         2.0  virginica</code></pre>
-<ul>
-<li>Both methods technically work, but method 2 is must easier to read
-and took a lot less typing!</li>
-<li>(advanced) Method 2 takes up significantly less memory on your
-machine than Method 1. This is one of the primary reasons we use
-%&gt;%</li>
-</ul>
+<!-- ## Packages + Tidyverse -->
+<!-- - You only need to install a package once (on every machine you're on) -->
+<!-- ```{r} -->
+<!-- install.packages("tidyverse") -->
+<!-- ## every time you want to use a function inside a package, you need to load the library -->
+<!-- library(tidyverse) #now we can use the tidyverse functions!  -->
+<!-- ``` -->
+<!-- - Before we get into functions in the tidyverse, we will introduce one more special operator in R -->
+<!-- - The tidyverse package contains the `%>%`  (pipe) operator  -->
+<!-- - Pipe takes what ever is before the `%>%` and inputs as the first element into whatever is after the `%>%`. -->
+<!-- ## An example using the mean function -->
+<!-- ```{r} -->
+<!-- ?mean  -->
+<!-- numbers <- c(1,5,6,8,23,45,67) -->
+<!-- ``` -->
+<!-- -The following are equivalent  -->
+<!-- - Method 1  -->
+<!-- ```{r} -->
+<!-- mean(numbers) -->
+<!-- ``` -->
+<!-- - Method 2 -->
+<!-- ```{r} -->
+<!-- numbers %>% -->
+<!--   mean() -->
+<!-- ``` -->
+<!-- - Pipe is usually used when we have a series of operations we want to compute -->
+<!-- - Lets use the iris data set as an example  -->
+<!-- ```{r} -->
+<!-- iris -->
+<!-- ``` -->
+<!-- - Say I want to arrange the rows in this data set by the Sepal.Length.  -->
+<!-- - The following are equivalent -->
+<!-- - Method 1 -->
+<!-- ```{r} -->
+<!-- arrange(iris, Sepal.Length) -->
+<!-- ``` -->
+<!-- - Method 2 -->
+<!-- ```{r} -->
+<!-- iris %>% -->
+<!--   arrange(Sepal.Length) -->
+<!-- ``` -->
+<!-- - But now say we only want to keep rows with Sepal.Width > 3 AND arrange the table by Sepal.Length -->
+<!-- - The following are equivalent  -->
+<!-- - Method 1 -->
+<!-- ```{r} -->
+<!-- temp1 <- arrange(iris, Sepal.Length) -->
+<!-- result <- filter(temp1, Sepal.Width > 3) -->
+<!-- result  -->
+<!-- ``` -->
+<!-- - Method 2 -->
+<!-- ```{r} -->
+<!-- iris %>% -->
+<!--   arrange(Sepal.Length) %>% -->
+<!--   filter(Sepal.Width > 3) -->
+<!-- ``` -->
+<!-- - Both methods technically work, but method 2 is must easier to read and took a lot less typing!  -->
+<!-- - (advanced) Method 2 takes up significantly less memory on your machine than Method 1. This is one of the primary reasons we use %>% -->
 </div>
 <div id="additional-resources" class="slide section level2">
 <h1>Additional resources</h1>
 <ul>
 <li>Learning base R operations (<a href="https://www.w3schools.com/r/" class="uri">https://www.w3schools.com/r/</a>).</li>
 <li>Learning tidyverse (specifically dplyr) operations (<a href="https://dplyr.tidyverse.org/articles/dplyr.html" class="uri">https://dplyr.tidyverse.org/articles/dplyr.html</a>).</li>
+</ul>
+</div>
+<div id="assignments-before-next-lecture-july-7" class="slide section level2">
+<h1>Assignments before next lecture (July 7)</h1>
+<ul>
+<li>Tidy Data Assignment (due date extended to tomorrow 9:59 am)</li>
+<li>DataComputing Ebook Chapter 1 Exercises (1.1, 1.2,1.3 and 1.5)</li>
+<li>Reading Quiz based on DataComputing Ebook Chapter 3 and 4</li>
 </ul>
 </div>
 
