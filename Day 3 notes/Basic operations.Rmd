@@ -21,7 +21,13 @@ To run a line within a chunk bring the prompt/cursor at the beginning of the lin
 10 * (2 - 9)
 3^2 / 9
 ```
+- It can perform logical operations as well
 
+```{r}
+4 > 3
+63 < 25
+94 == 45
+```
 ## Use : to sequential list 
 - list all numbers from 1 to 10 
 ```{r}
@@ -118,6 +124,15 @@ my.matrix[ , 5] #outputs all number in column 5
 - Similar for columns
 ```{r}
 my.matrix[1, ] #outputs all number in row 1
+```
+
+## Checking object types in R
+- You can check the object type in r using the function `class()`.
+```{r}
+class(4)
+class("char")
+class(c("a","b","c"))
+class(matrix(1:6,nrow=3,byrow=T))
 ```
 
 ## Vectorization
