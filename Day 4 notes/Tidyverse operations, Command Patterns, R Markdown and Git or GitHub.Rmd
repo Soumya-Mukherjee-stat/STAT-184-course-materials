@@ -3,7 +3,7 @@ title: "Tidyverse operations, Command Patterns, R Markdown, & Git/GitHub"
 author:
 - 'Instructor: Soumya Mukherjee'
 - 'Content credit: Dr. Matthew Beckman and Olivia Beck'
-date: "July 6, 2023"
+date: "July 7, 2023"
 output:
     slidy_presentation: default
     html_notebook: default
@@ -78,10 +78,10 @@ iris %>%
 - Both methods technically work, but method 2 is must easier to read and took a lot less typing! 
 - (advanced) Method 2 takes up significantly less memory on your machine than Method 1. This is one of the primary reasons we use `%>%`.
 
-## Additional resources about tidyverse opeartions
+## Additional resources about tidyverse operations
 - You can learn about additional dplyr functions (dplyr is a smaller package that is automatically loaded if the tidyverse package is loaded) at <https://dplyr.tidyverse.org/articles/dplyr.html>.
 - NOTE: a tibble is similar to a dataframe, and you can operate on it as if it is a dataframe.
-- Fun example to work on: <>
+- Fun example to work on: <https://github.com/Soumya-Mukherjee-stat/STAT-184-course-materials/blob/main/Day%204%20notes/tidyverse%20example.R> (You can dowload the .R file from the class notes page for Day 4 under Modules on Canvas).
 
 ## Thematic Statement 
 
@@ -373,4 +373,4 @@ Tip: The people at Posit publish RStudio "Cheat Sheets" can help you get off and
     
 ## Assignments before next lecture (July 10)
 - GitHub Practice Assignment 
-- DataComputing Ebook Chapter 2 and 3 Exercises () 
+- DataComputing Ebook Chapter 2 and 3 Exercises (Problem 2.1 to 2.7, Problems 3.1 to 3.6) 
