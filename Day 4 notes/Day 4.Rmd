@@ -67,4 +67,4 @@ iris %>%
   filter(Sepal.Width > 3)
 ```
 - Both methods technically work, but method 2 is must easier to read and took a lot less typing! 
-- (advanced) Method 2 takes up significantly less memory on your machine than Method 1. This is one of the primary reasons we use %>%
+- (advanced) Method 2 takes up significantly less memory on your machine than Method 1. This is one of the primary reasons we use `%>%`.

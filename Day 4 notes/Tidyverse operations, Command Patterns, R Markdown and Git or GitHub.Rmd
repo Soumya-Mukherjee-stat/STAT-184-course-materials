@@ -1,5 +1,5 @@
 ---
-title: "Command Patterns, R Markdown, & Git/GitHub"
+title: "Tidyverse operations, Command Patterns, R Markdown, & Git/GitHub"
 author:
 - 'Instructor: Soumya Mukherjee'
 - 'Content credit: Dr. Matthew Beckman and Olivia Beck'
@@ -18,6 +18,71 @@ library(dcData)
 
 data("BabyNames")
 ```
+## Packages + Tidyverse
+- You only need to install a package once (on every machine you're on)
+```{r}
+install.packages("tidyverse")
+
+## every time you want to use a function inside a package, you need to load the library
+library(tidyverse) #now we can use the tidyverse functions! 
+```
+- Before we get into functions in the tidyverse, we will introduce one more special operator in R
+- The tidyverse package contains the `%>%`  (pipe) operator 
+- Pipe takes what ever is before the `%>%` and inputs as the first element into whatever is after the `%>%`.
+
+## An example using the mean function
+```{r}
+?mean 
+numbers <- c(1,5,6,8,23,45,67)
+```
+-The following are equivalent 
+- Method 1 
+```{r}
+mean(numbers)
+```
+- Method 2
+```{r}
+numbers %>%
+  mean()
+```
+- Pipe is usually used when we have a series of operations we want to compute
+- Lets use the iris data set as an example 
+```{r}
+iris
+```
+- Say I want to arrange the rows in this data set by the Sepal.Length. 
+- The following are equivalent
+- Method 1
+```{r}
+arrange(iris, Sepal.Length)
+```
+- Method 2
+```{r}
+iris %>%
+  arrange(Sepal.Length)
+```
+- But now say we only want to keep rows with Sepal.Width > 3 AND arrange the table by Sepal.Length
+- The following are equivalent 
+- Method 1
+```{r}
+temp1 <- arrange(iris, Sepal.Length)
+result <- filter(temp1, Sepal.Width > 3)
+result 
+```
+- Method 2
+```{r}
+iris %>%
+  arrange(Sepal.Length) %>%
+  filter(Sepal.Width > 3)
+```
+- Both methods technically work, but method 2 is must easier to read and took a lot less typing! 
+- (advanced) Method 2 takes up significantly less memory on your machine than Method 1. This is one of the primary reasons we use `%>%`.
+
+## Additional resources about tidyverse opeartions
+- You can learn about additional dplyr functions (dplyr is a smaller package that is automatically loaded if the tidyverse package is loaded) at <https://dplyr.tidyverse.org/articles/dplyr.html>.
+- NOTE: a tibble is similar to a dataframe, and you can operate on it as if it is a dataframe.
+- Fun example to work on: <>
+
 ## Thematic Statement 
 
 #### Chapter 3 Intro: 
@@ -139,7 +204,6 @@ Just from the syntax, you should be able to discern the role of each of these th
 
 - It's important to note that these conventions are for the benefit of users & consumers of your code. 
 - **R will not "enforce" them for you** (but RStudio can help...more in a moment)
-- Style will be graded on several assignments (using RStudio config)
 
 
 ### Popular conventions:
@@ -289,7 +353,9 @@ Tip: The people at Posit publish RStudio "Cheat Sheets" can help you get off and
     - this is actually a very good thing because Git doesn't just overwrite changes of one user (that could be really bad)
     - Git instead lets a human decide which version of the work should ultimately be kept or removed in order to reconcile the apparent conflict
 
-
+## "Cloning" and "Forking"
+- You can clone repos that you yourself own. We actually cloned the Test-Repo onto our local computer when we created a new project with the "Version control" and "Git" options.
+- When you do not own repositories that you want to copy/download onto local computer and make changes to it, you need to "fork" the original repository to create a repository of your own.
 
 ## Git / GitHub
 
@@ -305,7 +371,6 @@ Tip: The people at Posit publish RStudio "Cheat Sheets" can help you get off and
     - For assignments, when I've given you a template Repo (i.e., a link deployed from Canvas)
     - You'll start from section "18.23 In GitHub..." at Step 3 in the Data Computing eBook
     
-## Assignments before next lecture (July 7)
-- Tidy Data Assignment (due date extended to tomorrow 9:59 am)
-- DataComputing Ebook Chapter 1 Exercises (1.1, 1.2,1.3 and 1.5) 
-- Reading Quiz based on DataComputing Ebook Chapter 3 and 4
+## Assignments before next lecture (July 10)
+- GitHub Practice Assignment 
+- DataComputing Ebook Chapter 2 and 3 Exercises () 
