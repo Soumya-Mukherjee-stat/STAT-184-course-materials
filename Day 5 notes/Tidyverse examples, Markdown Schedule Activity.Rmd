@@ -265,6 +265,8 @@ world_bank_pop %>%
 ```
   - Is the above table tidy? What is a case?
   
-## Assignments before next lecture (July 11)
+## Assignments before next lecture tomorrow (July 11)
 - Activity: STAT184-Rmd-schedule (Will explain in class). Assignment link: <https://classroom.github.com/a/Vbc6zqua>
 - No reading Quiz assigned for tomorrow, but please read Chapter 5 and 6 of DataComputing Ebook before class tomorrow. (<https://dtkaplan.github.io/DataComputingEbook/chap-graphics-introduction.html#chap:graphics-introduction> and <https://dtkaplan.github.io/DataComputingEbook/chap-frames-glyphs.html#chap:frames-glyphs>)
+
+- Activity: GitHub-Practive-184, DC Exercises 2 and 3 (due date extended by 1 day, so all of them due tomorrow)
