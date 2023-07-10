@@ -97,7 +97,7 @@ iris %>%
 ## R Command Patterns: Command Chains
 
 ```{r, eval=FALSE}
-Princes <- 
+Princes <-
   BabyNames %>%
   filter(name == "Prince") %>%
   group_by(year, sex) %>%
