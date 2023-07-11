@@ -9,7 +9,7 @@ output:
   pdf: default
 ---
 
-## How to configrue GitHub and RStudio for the very first time 
+## How to configure GitHub and RStudio for the very first time 
 
 You only need to do these steps once. 
 
