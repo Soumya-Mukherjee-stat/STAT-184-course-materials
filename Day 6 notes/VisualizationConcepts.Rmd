@@ -18,6 +18,10 @@ library(tidyverse)
 library(COUNT)
 ```
 
+## Useful packages for interactive visulaization (Install these first)
+- esquisse
+- mosaic
+
 ## Grammar of Graphics
 
 - Lots of new terminology this week
@@ -102,6 +106,12 @@ See: *<https://ggplot2.tidyverse.org/reference/>*
 * For example, 
     - a legend makes explicit the meaning of Red & Blue points on the chart
     - a 1 cm length printed on a map to inform the reader that it corresponds to 100 meters on campus
+    
+#### **facets**
+
+* Using multiple aesthetics such as shape, color, and size to display multiple variables can produce a confusing, hard-to-read graph.
+
+* Facets provide a simple and effective alternative by creating a separate frame for each distinct value (or distinct range of values) of a variable not displayed in the graph.
 
 
 Can you determine all the components on the following graph?
@@ -281,6 +291,7 @@ It's as if the variables were given the name of the aesthetic.
 ## Layers -- building up complex plots 
 
 Each layer may have its own data, glyphs, aesthetic mapping, etc.
+Ger=nerally, they have the same frame i.e. the x-axis and y-axis are the same for the different layers.
 
 ```{r}
 ggplot(data = iris , aes(x = Sepal.Length, y = Petal.Length, colour = as.factor(Species))) +
@@ -317,7 +328,7 @@ ggplot(data = iris , aes(x = Petal.Width)) +
     
  3. **Graphics construction** 
     
-    - Newbies: match variables to aesthetics **interactively**: 
+    - For beginners: match variables to aesthetics **interactively**:
         - `esquisse` package using `esquisser( )`  
         - `mosaic` package using `mplot( )` 
         - BOTH generate `ggplot2` syntax 
@@ -398,3 +409,12 @@ mWorldMap(BigMac, key = "iso_a3", fill = "dollar_price")
   - Scale
   - Guide
   - Facet
+  
+## Additional resources for learning about ggplot2:
+- Visit <http://www.sthda.com/english/wiki/ggplot2-essentials>
+
+
+
+## Assignments before next lecture (July 12)
+- Reading Quiz based on DC Ebook Ch 05 and 06
+- Activity: Graph Exploration (You will start this in class on July 12 and submit on July 13)

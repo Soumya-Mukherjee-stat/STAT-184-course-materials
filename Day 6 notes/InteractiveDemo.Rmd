@@ -31,13 +31,18 @@ BigMac <- tuesdata[["big-mac"]]
 First, lets investigate the Big Mac price and GDP per capita for each country.
 
 ```{r}
+# Histogram for Big Mac price
 ggplot(BigMac) +
  aes(x = dollar_price) +
  geom_histogram(bins = 30L, fill = "#0c4c8a") +
  theme_minimal()
+
+# mplot(BigMac)
+# esquisser(BigMac)
 ```
 
 ```{r}
+# Density plot for GDP per Capita
 ggplot(BigMac) +
  aes(x = gdp_dollar) +
  geom_density(adjust = 1L, fill = "#0c4c8a") +
@@ -47,7 +52,7 @@ ggplot(BigMac) +
 
 
 ```{r}
-
+# Scatterplot of BigMac price (y) vs. GDP per capita (x)
 ggplot(BigMac) +
  aes(x = gdp_dollar, y = dollar_price) +
  geom_point(size = 1L, colour = "#fde725") +
