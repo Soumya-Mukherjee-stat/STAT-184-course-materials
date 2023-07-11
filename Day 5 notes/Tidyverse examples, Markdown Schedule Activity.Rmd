@@ -118,6 +118,8 @@ dim(dat.football)
 -Get the column names of the data 
 ```{r}
 colnames(dat.football)
+dat.football %>%
+  colnames()
 ```
 - Get the row names of the data
 ```{r}
@@ -190,6 +192,7 @@ max(dat.football$Salary)
 max.salary <- max(dat.football$Salary) #get the max salary
 row.max.salary <- dat.football$Salary == max.salary
 answer.1 <- dat.football$PlayerName[row.max.salary]
+answer.1
 ```
 
     - Method 2
