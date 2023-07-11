@@ -18,7 +18,7 @@ library(tidyverse)
 library(COUNT)
 ```
 
-## Useful packages for interactive visulaization (Install these first)
+## Useful packages for interactive visualization (Install these first)
 - esquisse
 - mosaic
 
