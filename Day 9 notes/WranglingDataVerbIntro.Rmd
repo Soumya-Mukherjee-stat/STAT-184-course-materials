@@ -459,3 +459,6 @@ world_bank_pop %>%
 ```
 
 ## Assignments before next lecture (July 17)
+
+- Reading Quiz Chapter 7 (due Monday, July 17, 9:59 am)
+- Activity: STAT184-HELPrct (Go through this over the weekend, will do this in class if needed, submit on Tuesday, July 18, 9:59am)
