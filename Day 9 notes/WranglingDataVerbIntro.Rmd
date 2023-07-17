@@ -204,7 +204,7 @@ Here's a bar chart that might be used to show the election results:
 ```{r }
 VoteResults <- 
   Minneapolis2013 %>%
-  group_by( First ) %>% 
+  group_by( First ) %>%
   summarise( votes = n() )
 
 head(VoteResults)

@@ -1,0 +1,27 @@
+---
+title: "Data Exploration Demo for Minneapolis2013"
+author: "Soumya Mukherjee"
+date: "2023-07-14"
+output: html_document
+---
+
+```{r}
+library(dcData)
+data("Minneapolis2013", package = "dcData")
+
+help(Minneapolis2013)
+head(Minneapolis2013)
+nrow(Minneapolis2013)
+colnames(Minneapolis2013)
+length(colnames(Minneapolis2013))
+Minneapolis2013 %>%
+  colnames() %>%
+  length()
+
+VoteResults <-
+  Minneapolis2013 %>%
+  group_by( First ) %>% 
+  summarise( votes = n() )
+
+VoteResults
+```
