@@ -122,7 +122,8 @@ library(lubridate)  # nice functions for handling dates
 
 # data intake
 data("presidential", package = "ggplot2")
-
+help(presidential)
+head(presidential)
 ## Add some more cases to the data set 
 # you can search the help for the `tribble` function if you want to figure it out what's happening
 AddPres <- 
@@ -131,10 +132,10 @@ AddPres <-
                     "Truman", ymd("1945-04-12"), ymd("1953-01-20"), "Democratic",
                     "Trump", ymd("2017-01-20"), ymd("2021-01-20"), "Republican", 
                     "Biden", ymd("2021-01-20"), ymd(today()), "Democratic")
-
+AddPres
 # append the rows of our two "data frames"
 Presidents <- bind_rows(presidential, AddPres)
-
+Presidents
 head(Presidents)
 ```
 
@@ -184,7 +185,7 @@ Presidents_wrangled %>%
 # 6 shortest
 Presidents_wrangled %>%
     arrange(duration) %>%
-    head()
+    head(n=3)
 
 # 7. longest  
 Presidents_wrangled %>%
