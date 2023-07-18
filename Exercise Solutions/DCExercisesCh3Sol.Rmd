@@ -1,0 +1,101 @@
+---
+title: "Solution: DC Exercises Chapter 3"
+author:
+- "Instructor - Soumya Mukherjee"
+- "Content Credit- Dr. Matthew Beckman and Olivia Beck"
+date: "July 17, 2023"
+output: pdf_document
+---
+
+## Assigned Exercises:
+- DC Ch 3 Exercises: 3.1, 3.2, 3.3, 3.4, 3.5, 3.6
+
+## Grading:
+Grade as follows:
+
+- [3 points] completion (attempting all exercises)
+- 1 point for correct solutions for all questions except 3.3
+- 2 points for correct solution of 3.3
+
+**Please be as lenient as possible while grading**.
+
+## Solutions:
+
+### Problem 3.1
+
+1. a data frame:
+```{r eval=F}
+Fireplace
+```
+2. a function:
+```{r eval=F}
+fireplace()
+```
+3. the name of a named argument:
+```{r eval=F}
+function(x = fireplace)
+```
+4. a variable:
+```{r eval=F}
+fireplace
+```
+
+### Problem 3.2
+Flawed statement:
+```{r eval=F}
+Result <- %>% filter(BabyNames, name == "Prince")
+```
+Corrected statement:
+```{r eval=F}
+Result <- BabyNames %>% filter(name == "Prince")
+```
+
+- pipe operator `%>%` can’t follow an assignment operator `<-`
+- data table `BabyNames` should come before the pipe rather than as an argument to the filter function
+
+### Problem 3.3
+
+Here are the kinds of named objects given: 
+a. function name
+b. data table name
+c. variable name
+d. name of a named argument
+
+Identify what kind of object each of the following name is used for:
+
+1. BabyNames - b
+2. filter - a
+3. name - c,d
+4. == - d
+5. group_by - a
+6. year - c, d
+7. sex - c, d
+8. summarise - a
+9. yearlyTotal - d
+10. sum - a, d
+11. count - d
+12. ggplot - a
+13. aes - a, d
+14. x - c, d
+15. y - c, d
+16. geom_point - a
+17. color - d
+18. geom_vline - a
+19. xintercept - d
+
+### Problem 3.4
+
+- meaning of `brainwt` variable: weight of an animal brain
+- how many cases: 83
+- real-world meaning of case: An animal/mammal
+- levels of `vore`: {carni, herbi, insecti, omni, NA}
+
+### Problem 3.5
+a. SAME
+b. SAME
+c. DIFFERENT. This includes a `mean()` function rather than the `sum()` function shown in the other commands
+d. SAME
+
+### Problem 3.6
+1. `date()` takes no arguments
+2. `date()` returns a string **constant** of the current date and time.
