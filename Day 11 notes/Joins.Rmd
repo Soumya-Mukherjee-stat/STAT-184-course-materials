@@ -131,7 +131,7 @@ Grades <- read_csv("grades.csv")
 
 ```
 
-```{r echo=FALSE}
+```{r}
 set.seed(101)
 Grades %>% sample_n(size = 4)
 ```
@@ -142,7 +142,7 @@ Grades %>% sample_n(size = 4)
 Courses <- read_csv("coursesUpdated.csv")   
 ```
 
-```{r echo=FALSE}
+```{r}
 set.seed(101)
 Courses %>% sample_n(size = 3)
 ```
