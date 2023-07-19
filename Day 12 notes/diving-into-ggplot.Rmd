@@ -456,6 +456,9 @@ ggplot(data = diamonds,  aes(x = carat, y = price) )+
 
 - But again, all 3 codes generate the the exact same plot (so does it really matter that much which option we use??)
 
+## Additional resources for learning more about ggplot2
+- Check out <http://www.sthda.com/english/wiki/ggplot2-essentials>
+
 ## Reminders about assignments (all due Friday July 21, 9:59 am)
 - Activity: PopularNames
 - Reading quiz Chapters 10 and 11
