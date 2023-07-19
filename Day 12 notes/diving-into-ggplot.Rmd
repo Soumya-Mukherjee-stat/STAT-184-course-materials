@@ -461,4 +461,7 @@ ggplot(data = diamonds,  aes(x = carat, y = price) )+
 
 ## Reminders about assignments (all due Friday July 21, 9:59 am)
 - Activity: PopularNames
-- Reading quiz Chapters 10 and 11
+- Reading quiz DataComputing Ebook Chapters 10 and 11
+
+## Suggested Reading before tomorrow's class (July 20)
+- DataComputing Ebook Chapter 12
