@@ -5,10 +5,10 @@ author:
 - "Content Credit- Dr. Matthew Beckman and Olivia Beck"
 date: "July 20, 2023"
 output:
-  slidy_presentation: default
+  html_notebook: default
   html_document:
     df_print: paged
-  html_notebook: default
+  slidy_presentation: default
 ---
 
 ```{r include=FALSE}
@@ -387,3 +387,5 @@ BabyTotalsNarrow %>%
 - Activity: PopularNames (due Friday July 21, 9:59 am)
 - Reading quiz DataComputing Ebook Chapters 10 and 11 (due Friday July 21, 9:59 am)
 - Reading quiz DataComputing Ebook Chapter 12 (due Monday July 24, 9:59 am)
+- Activity: STAT184-Bird-Species (due Tuesday July 24, 9:59 am)
+- Activity: STAT184-Bicycle-Sharing (due Tuesday July 24, 9:59 am)
