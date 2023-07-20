@@ -5,10 +5,10 @@ author:
 - "Content Credit- Dr. Matthew Beckman and Olivia Beck"
 date: "July 20, 2023"
 output:
-  html_notebook: default
+  slidy_presentation: default
   html_document:
     df_print: paged
-  slidy_presentation: default
+  html_notebook: default
 ---
 
 ```{r include=FALSE}
@@ -389,3 +389,19 @@ BabyTotalsNarrow %>%
 - Reading quiz DataComputing Ebook Chapter 12 (due Monday July 24, 9:59 am)
 - Activity: STAT184-Bird-Species (due Tuesday July 24, 9:59 am)
 - Activity: STAT184-Bicycle-Sharing (due Tuesday July 24, 9:59 am)
+
+## A few words about the final project
+- Will be individual assignements
+- Similar in nature to the Activities that you are doing
+- You will need to explore and analyze using EDA 2 different data sets that are not part of an R package (could be a csv file, could be a dataset hosted on github, could be from a webpage)
+- For now, try to think about interesting topics you might want to explore and where could you find relevant datasets
+- For some it will seem daunting to start from scratch looking for one or more “interesting” data sets. There
+are lots of useful repositories out there. Here are a few links to get you started, but please feel free to use
+any data that interest you! 
+  - <https://www.springboard.com/blog/free-public-data-sets-data-science-project/>
+  - <https://www.dataquest.io/blog/free-datasets-for-projects/>
+  - <https://data.cityofnewyork.us/>
+  - <http://www.icpsr.umich.edu/icpsrweb/ICPSR/>
+  - <https://github.com/awesomedata/awesome-public-datasets>
+  - <https://github.com/fivethirtyeight/data>
+- I repeat: **you can use any data set you want and it may not be in the above list. The list is just a starting point **.
