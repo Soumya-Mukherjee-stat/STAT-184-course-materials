@@ -3,7 +3,7 @@ title: "Diving into `ggplot2`"
 author:
 - "Instructor - Soumya Mukherjee"
 - "Content Credit- Dr. Matthew Beckman and Olivia Beck"
-date: "July 19, 2023"
+date: "19th July, 2023"
 output:
   html_document:
     df_print: paged
