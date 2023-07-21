@@ -1686,7 +1686,75 @@ a cell of data frame to contain another data frame (using
                   innerframe = data.frame(inner.numbers = 1:26, 
                                           inner.letters = letters),
                   innermatrix = matrix(1:20, nrow = 10, ncol = 2)
-                  )</code></pre>
+                  )
+
+temp_list</code></pre>
+<pre><code>## $numbers
+##  [1]  1  2  3  4  5  6  7  8  9 10
+## 
+## $letters
+## [1] &quot;A&quot; &quot;B&quot; &quot;C&quot;
+## 
+## $words
+## [1] &quot;These&quot; &quot;are&quot;   &quot;words&quot; &quot;.&quot;    
+## 
+## $innerlist
+## $innerlist$inner.numbers
+##   [1] 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117
+##  [19] 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135
+##  [37] 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153
+##  [55] 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171
+##  [73] 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189
+##  [91] 190 191 192 193 194 195 196 197 198 199 200
+## 
+## $innerlist$states
+##  [1] &quot;AL&quot; &quot;AK&quot; &quot;AZ&quot; &quot;AR&quot; &quot;CA&quot; &quot;CO&quot; &quot;CT&quot; &quot;DE&quot; &quot;FL&quot; &quot;GA&quot; &quot;HI&quot; &quot;ID&quot; &quot;IL&quot; &quot;IN&quot; &quot;IA&quot;
+## [16] &quot;KS&quot; &quot;KY&quot; &quot;LA&quot; &quot;ME&quot; &quot;MD&quot; &quot;MA&quot; &quot;MI&quot; &quot;MN&quot; &quot;MS&quot; &quot;MO&quot; &quot;MT&quot; &quot;NE&quot; &quot;NV&quot; &quot;NH&quot; &quot;NJ&quot;
+## [31] &quot;NM&quot; &quot;NY&quot; &quot;NC&quot; &quot;ND&quot; &quot;OH&quot; &quot;OK&quot; &quot;OR&quot; &quot;PA&quot; &quot;RI&quot; &quot;SC&quot; &quot;SD&quot; &quot;TN&quot; &quot;TX&quot; &quot;UT&quot; &quot;VT&quot;
+## [46] &quot;VA&quot; &quot;WA&quot; &quot;WV&quot; &quot;WI&quot; &quot;WY&quot;
+## 
+## 
+## $innerframe
+##    inner.numbers inner.letters
+## 1              1             a
+## 2              2             b
+## 3              3             c
+## 4              4             d
+## 5              5             e
+## 6              6             f
+## 7              7             g
+## 8              8             h
+## 9              9             i
+## 10            10             j
+## 11            11             k
+## 12            12             l
+## 13            13             m
+## 14            14             n
+## 15            15             o
+## 16            16             p
+## 17            17             q
+## 18            18             r
+## 19            19             s
+## 20            20             t
+## 21            21             u
+## 22            22             v
+## 23            23             w
+## 24            24             x
+## 25            25             y
+## 26            26             z
+## 
+## $innermatrix
+##       [,1] [,2]
+##  [1,]    1   11
+##  [2,]    2   12
+##  [3,]    3   13
+##  [4,]    4   14
+##  [5,]    5   15
+##  [6,]    6   16
+##  [7,]    7   17
+##  [8,]    8   18
+##  [9,]    9   19
+## [10,]   10   20</code></pre>
 <p>Access the first element in the list</p>
 <ol style="list-style-type: decimal">
 <li>use double square brackets</li>
