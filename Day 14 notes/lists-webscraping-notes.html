@@ -2137,17 +2137,36 @@ page using Google Chrome browser: <a href="http://www.r-bloggers.com/using-rvest
 <code>cssselect</code> library (see help documentation for
 <code>html_nodes()</code>)</li>
 </ul>
-<pre><code>library(&quot;rvest&quot;)
+<pre class="r"><code>library(&quot;rvest&quot;)
 
 page_url &lt;- &quot;https://en.wikipedia.org/wiki/Mile_run_world_record_progression&quot;
 XPATH &lt;- &#39;//*[@id=&quot;mw-content-text&quot;]/div/table&#39;
+cssPATH &lt;- &#39;#mw-content-text &gt; div.mw-parser-output &gt; table:nth-child(11)&#39;
 
-table_list &lt;- 
+table_list_1 &lt;- 
   page_url %&gt;%
   read_html() %&gt;%
   html_node(xpath = XPATH) %&gt;%
   html_table(fill = TRUE)
-</code></pre>
+
+table_list_2 &lt;-
+  page_url %&gt;%
+  read_html() %&gt;%
+  html_node(css = cssPATH) %&gt;%
+  html_table(fill = TRUE)
+
+table_list_1</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Time"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Athlete"],"name":[2],"type":["chr"],"align":["left"]},{"label":["Nationality"],"name":[3],"type":["chr"],"align":["left"]},{"label":["Date"],"name":[4],"type":["chr"],"align":["left"]},{"label":["Venue"],"name":[5],"type":["chr"],"align":["left"]}],"data":[{"1":"4:28","2":"Charles Westhall","3":"United Kingdom","4":"26 July 1855","5":"London"},{"1":"4:28","2":"Thomas Horspool","3":"United Kingdom","4":"28 September 1857","5":"Manchester"},{"1":"4:23","2":"Thomas Horspool","3":"United Kingdom","4":"12 July 1858","5":"Manchester"},{"1":"4:221⁄4","2":"Siah Albison","3":"United Kingdom","4":"27 October 1860","5":"Manchester"},{"1":"4:213⁄4","2":"William Lang","3":"United Kingdom","4":"11 July 1863","5":"Manchester"},{"1":"4:201⁄2","2":"Edward Mills","3":"United Kingdom","4":"23 April 1864","5":"Manchester"},{"1":"4:20","2":"Edward Mills","3":"United Kingdom","4":"25 June 1864","5":"Manchester"},{"1":"4:171⁄4","2":"William Lang","3":"United Kingdom","4":"19 August 1865","5":"Manchester"},{"1":"4:171⁄4","2":"William Richards","3":"United Kingdom","4":"19 August 1865","5":"Manchester"},{"1":"4:161⁄5","2":"William Cummings","3":"United Kingdom","4":"14 May 1881","5":"Preston"},{"1":"4:123⁄4","2":"Walter George","3":"United Kingdom","4":"23 August 1886","5":"London"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<pre class="r"><code>table_list_2</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Time"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Athlete"],"name":[2],"type":["chr"],"align":["left"]},{"label":["Nationality"],"name":[3],"type":["chr"],"align":["left"]},{"label":["Date"],"name":[4],"type":["chr"],"align":["left"]},{"label":["Venue"],"name":[5],"type":["chr"],"align":["left"]}],"data":[{"1":"4:28","2":"Charles Westhall","3":"United Kingdom","4":"26 July 1855","5":"London"},{"1":"4:28","2":"Thomas Horspool","3":"United Kingdom","4":"28 September 1857","5":"Manchester"},{"1":"4:23","2":"Thomas Horspool","3":"United Kingdom","4":"12 July 1858","5":"Manchester"},{"1":"4:221⁄4","2":"Siah Albison","3":"United Kingdom","4":"27 October 1860","5":"Manchester"},{"1":"4:213⁄4","2":"William Lang","3":"United Kingdom","4":"11 July 1863","5":"Manchester"},{"1":"4:201⁄2","2":"Edward Mills","3":"United Kingdom","4":"23 April 1864","5":"Manchester"},{"1":"4:20","2":"Edward Mills","3":"United Kingdom","4":"25 June 1864","5":"Manchester"},{"1":"4:171⁄4","2":"William Lang","3":"United Kingdom","4":"19 August 1865","5":"Manchester"},{"1":"4:171⁄4","2":"William Richards","3":"United Kingdom","4":"19 August 1865","5":"Manchester"},{"1":"4:161⁄5","2":"William Cummings","3":"United Kingdom","4":"14 May 1881","5":"Preston"},{"1":"4:123⁄4","2":"Walter George","3":"United Kingdom","4":"23 August 1886","5":"London"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 </div>
 <div id="assignments" class="section level2">
 <h2>Assignments</h2>

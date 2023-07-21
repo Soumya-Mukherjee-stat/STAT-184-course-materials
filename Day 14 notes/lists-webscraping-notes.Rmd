@@ -376,18 +376,27 @@ ReceivingStats
 - CSS selectors for single table also available through the `selectr` package, which is a port of the python `cssselect` library (see help documentation for `html_nodes()`)
 
 
-```
+```{r}
 library("rvest")
 
 page_url <- "https://en.wikipedia.org/wiki/Mile_run_world_record_progression"
 XPATH <- '//*[@id="mw-content-text"]/div/table'
+cssPATH <- '#mw-content-text > div.mw-parser-output > table:nth-child(11)'
 
-table_list <- 
+table_list_1 <- 
   page_url %>%
   read_html() %>%
   html_node(xpath = XPATH) %>%
   html_table(fill = TRUE)
 
+table_list_2 <-
+  page_url %>%
+  read_html() %>%
+  html_node(css = cssPATH) %>%
+  html_table(fill = TRUE)
+
+table_list_1
+table_list_2
 ```
 ## Assignments 
 - Reading Quiz Chapters 13 and 16 (due Tuesday July 25 9:59 am)
