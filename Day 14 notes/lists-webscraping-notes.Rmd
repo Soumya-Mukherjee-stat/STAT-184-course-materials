@@ -274,6 +274,7 @@ We'll learn additional tools (e.g., Regular Expressions) in coming weeks that wi
 str(table_list)
 
 # Inspect the first table in the list (IAAF Men from the Wikipedia Page)
+
 PVrecords <- table_list[[2]]
 head(PVrecords) 
 ```
@@ -343,6 +344,8 @@ PlayerStats <- url %>%
   read_html() %>%
   html_nodes(css = "table") %>%
   html_table(fill = TRUE)
+
+PlayerStats
 ```
 
 
@@ -382,7 +385,7 @@ ReceivingStats
 library("rvest")
 
 page_url <- "https://en.wikipedia.org/wiki/Mile_run_world_record_progression"
-XPATH <- '//*[@id="mw-content-text"]/div/table'
+XPATH <- '//*[@id="mw-content-text"]/div[1]/table[1]'
 cssPATH <- '#mw-content-text > div.mw-parser-output > table:nth-child(11)'
 
 table_list_1 <- 
