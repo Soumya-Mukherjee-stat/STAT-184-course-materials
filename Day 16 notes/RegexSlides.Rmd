@@ -3,7 +3,7 @@ title: "Regular Expressions"
 author:
 - "Instructor - Soumya Mukherjee"
 - "Content Credit- Dr. Matthew Beckman and Olivia Beck"
-date: "July 25, 2023"
+date: "July 26, 2023"
 output:
   slidy_presentation: default
   html_notebook: default
@@ -66,8 +66,6 @@ knitr::opts_chunk$set(message = FALSE)
 ## Pole Vault Demo
 
 - live demo to clean up Pole Vault Records progression seen in web scraping 
-
-<https://www.youtube.com/watch?v=OAVNb2N7ntM>
 
 ![](DuplantisWR.png)
 
