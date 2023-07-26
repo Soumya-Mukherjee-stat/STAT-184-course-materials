@@ -472,6 +472,23 @@ In data visualization it is always important to balance glyphs with interpretabi
 - Reading Quiz DC Ebook Chapter 15 (due Thursday, July 27, 9:59am )
 - Suggested Reading : Chapter 17 Regular expressions 
 
+## A few words about the final project
+- Will be individual assignements
+- Similar in nature to the Activities that you are doing
+- You will need to explore and analyze using EDA atleast 2 different data sets. The primary dataset should not be part of an R package (could be a csv file, could be a dataset hosted on github, could be from a webpage), but the secondary dataset could be anything.
+- For now, try to think about interesting topics you might want to explore and where could you find relevant datasets.
+- You will need to submit a topic for the final project within August 2.
+- For some it will seem daunting to start from scratch looking for one or more “interesting” data sets. There
+are lots of useful repositories out there. Here are a few links to get you started, but please feel free to use
+any data that interest you! 
+  - <https://www.springboard.com/blog/free-public-data-sets-data-science-project/>
+  - <https://www.dataquest.io/blog/free-datasets-for-projects/>
+  - <https://data.cityofnewyork.us/>
+  - <http://www.icpsr.umich.edu/icpsrweb/ICPSR/>
+  - <https://github.com/awesomedata/awesome-public-datasets>
+  - <https://github.com/fivethirtyeight/data>
+- I repeat: **you can use any data set you want and it may not be in the above list. The list is just a starting point **.
+
 
 
 
