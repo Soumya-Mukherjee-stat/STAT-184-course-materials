@@ -14,7 +14,7 @@ The weekly activities in the Data Computing text book are good examples of the t
 Students need to work independently on their projects (this is not a group assignment). 
 
 ## Scoring
-The project is worth 30% of the final course grade and will be evaluated according to the following: 
+The project is worth 25% of the final course grade and will be evaluated according to the following: 
 
 - **Reproducible Research**: The final product is published to a self-contained GitHub repository and presented as a and RNotebook.  Your actual analysis should be an **.nb.html** file with embedded .Rmd (like usual) that can be run without errors by the instructor or graders without prior exposure to the project or modification of your code.
 
