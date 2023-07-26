@@ -205,7 +205,6 @@ Some of this is based on scrutiny of the data collection practices (and study de
 
 
 ```{r}
-
 SAT_2010 %>%
     ggplot(aes(x = salary, y = sat_pct)) +
     geom_point() +
@@ -227,12 +226,19 @@ SAT_2010 %>%
     xlab("State average teacher salary (US dollars)") +
     ylab("Percentage of students who take the SAT")
 
+# density of sat_rate... apparent gap (why??)
 SAT_2010 %>%
-    ggplot(aes(x = expenditure, y = sat_pct)) +
-    geom_point() +
-    # geom_smooth() +
-    xlab("State average expenditure per student") +
-    ylab("Percentage of students who take the SAT")
+    ggplot(aes(x = sat_pct)) +
+    geom_density() +
+    geom_rug() +
+    xlab("Percentage of students who take SAT in each state")
+
+SAT_2010 <-
+    SAT_2010 %>%
+    mutate(sat_rate = cut(sat_pct, breaks = c(0, 30, 70, 100),
+                          labels = c("low", "med", "high")))
+    # mutate(sat_rate = cut(sat_pct, breaks = c(0, 40, 100),
+    #                       labels = c("lower", "higher")))
 
 SAT_2010 %>%
     ggplot(aes(x = expenditure, y = sat_pct)) +
@@ -248,28 +254,8 @@ SAT_2010 %>%
     xlab("State average expenditure per student") +
     ylab("Percentage of students who take the SAT")
 
-
 SAT_2010 %>%
     filter(sat_pct < 25, expenditure > 15)
-
-
-# density of sat_rate... apparent gap (why??)
-SAT_2010 %>%
-    ggplot(aes(x = sat_pct)) +
-    geom_density() +
-    geom_rug() +
-    xlab("Percentage of students who take SAT in each state")
-
-
-
-SAT_2010 <-
-    SAT_2010 %>%
-    mutate(sat_rate = cut(sat_pct, breaks = c(0, 30, 70, 100),
-                          labels = c("low", "med", "high")))
-    # mutate(sat_rate = cut(sat_pct, breaks = c(0, 40, 100),
-    #                       labels = c("lower", "higher")))
-
-
 ```
 
 
@@ -283,6 +269,8 @@ SAT_2010 <-
 
 ```{r}
 
+## Relationship b/w salary and Average total SAT scores
+
 SAT_2010 %>%
     ggplot(aes(x = salary, y = total)) +
     geom_point() +
@@ -295,6 +283,7 @@ SAT_2010 %>%
     ggplot(aes(x = salary, y = total)) +
     geom_point() +
     geom_smooth() +
+    # geom_smooth(method = "lm") +
     xlab("State average teacher salary (US dollars)") +
     ylab("State average total SAT score")
 
@@ -306,25 +295,55 @@ SAT_2010 %>%
     ylab("State average total SAT score")
 
 SAT_2010 %>%
-    ggplot(aes(x = expenditure, y = total, color = sat_pct)) +
+    ggplot(aes(x = salary, y = total, color = sat_rate)) +
     geom_point() +
-    # geom_smooth() +
+    geom_smooth() +
     # geom_smooth(method = "lm") +
     xlab("State average teacher salary (US dollars)") +
     ylab("State average total SAT score")
 
 SAT_2010 %>%
-    ggplot(aes(x = expenditure, y = total, color = sat_rate)) +
+    ggplot(aes(x = salary, y = total, color = sat_rate)) +
+    geom_point() +
+    geom_smooth(method = "lm") +
+    xlab("State average teacher salary (US dollars)") +
+    ylab("State average total SAT score")
+
+SAT_2010 %>%
+    ggplot(aes(x = expenditure, y = total)) +
     geom_point() +
     # geom_smooth() +
     # geom_smooth(method = "lm") +
-    xlab("State average teacher salary (US dollars)") +
+    xlab("State average expenditure per student (US dollars)") +
+    ylab("State average total SAT score")
+
+SAT_2010 %>%
+    ggplot(aes(x = expenditure, y = total)) +
+    geom_point() +
+    geom_smooth() +
+    xlab("State average expenditure per student (US dollars)") +
     ylab("State average total SAT score")
 
 # since we have state data, maybe we should map it!
 library(mosaic)
 mUSMap(SAT_2010, key = "state", "fill" = "sat_rate")
 mUSMap(SAT_2010, key = "state", "fill" = "total")
+
+## relationship between expenditure and salary
+SAT_2010 %>%
+    ggplot(aes(x = expenditure, y = total, color = sat_pct)) +
+    geom_point() +
+    # geom_smooth() +
+    # geom_smooth(method = "lm") +
+    xlab("State average expenditure per student (US dollars)") +
+    ylab("State average total SAT score")
+
+SAT_2010 %>%
+    ggplot(aes(x = expenditure, y = total, color = sat_rate)) +
+    geom_point() +
+    geom_smooth() +
+    xlab("State average expenditure per student (US dollars)") +
+    ylab("State average total SAT score")
 
 ```
 
@@ -451,7 +470,7 @@ In data visualization it is always important to balance glyphs with interpretabi
   
 ## Assignments
 - Reading Quiz DC Ebook Chapter 15 (due Thursday, July 27, 9:59am )
-- Suggested Reading for tomorrow : Chapter 17 Regular expressions 
+- Suggested Reading : Chapter 17 Regular expressions 
 
 
 
