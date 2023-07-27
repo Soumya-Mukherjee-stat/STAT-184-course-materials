@@ -42,8 +42,8 @@ knitr::opts_chunk$set(message = FALSE)
 
 * Scraping HTML data
     * We scraped the [Men's Pole Vault World Records from Wikipedia](https://en.wikipedia.org/wiki/Men%27s_pole_vault_world_record_progression)
-    * We had been stuck because of footnotes in the `Date` column previously
-    * We can use RegEx to clean up (We'll try it together in a few moments)
+    * The footnotes in the `Date` column do not allow working with the dates directly, so we need to clean them up.
+    * We can use RegEx to clean up
 
 
 ## How to Survive in the Land of Regex
@@ -140,4 +140,4 @@ PVMen %>%
 - <https://github.com/rstudio/cheatsheets/blob/main/strings.pdf>
 
 ## Assignments
-- Activity: Statistics of Gene Expression (due 11:59pm Saturday , July 29)
+- Activity: Statistics of Gene Expression (due 9:59am Sunday , July 30)

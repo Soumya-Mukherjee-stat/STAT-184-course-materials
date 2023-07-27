@@ -9,7 +9,7 @@ require(lubridate)
 require(tidyverse)
 require(rvest)
 
-## Webscraping (Did this on Week 10) ------------------------------------
+## Webscraping ------------------------------------
 
 webpage <- "https://en.wikipedia.org/wiki/Men%27s_pole_vault_world_record_progression"
 
