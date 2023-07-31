@@ -803,7 +803,9 @@ mean(sim_results_df$muCapture)
 
 ```
 
-
+## Final Project announcements:
+- Submit project idea within August 2, 9:59 am
+- Submit final project report and checksheet within August 11, 11.59pm 
 
 
 
