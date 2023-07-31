@@ -16,7 +16,7 @@ Students need to work independently on their projects (this is not a group assig
 ## Scoring
 The project is worth 25% of the final course grade and will be evaluated according to the following: 
 
-- **Reproducible Research**: The final product is published to a self-contained GitHub repository and presented as a and RNotebook.  Your actual analysis should be an **.nb.html** file with embedded .Rmd (like usual) that can be run without errors by the instructor or graders without prior exposure to the project or modification of your code.
+- **Reproducible Research**: The final product is published to a self-contained GitHub repository and presented as a and RNotebook.  Your actual analysis should be an **.nb.html** file with embedded .Rmd (like usual) that can be run without errors by the instructor or graders without prior exposure to the project or modification of your code. The link to the Final project assignment on Github (it is available on Canvas as well) is : <https://classroom.github.com/a/YfIj2Ow8>. 
 
 - **Data Access**: The project uses 2 or more real data sets - a primary dataset and a secondary dataset. The primary data should not be loaded from an R package, but it may be joined to secondary data available in an R package.  For example, the primary data could be joined to a data set like `CountryCentroids` from the `dcData` package if `iso_a3` country labels or latitude/longitude information are needed. Data access should be reproduced in the .Rmd file (e.g. read in from URL, scrape from web, or in a CSV in the GitHub repo).  If you use a live data source (e.g. from the web), it's a good idea to save a static copy of the data in your GitHub repo as a backup just in case the source data fails or changes the day your project is due (!)
 
@@ -34,7 +34,8 @@ The project is worth 25% of the final course grade and will be evaluated accordi
 ## Project Milestones
 
 - August 2, 2023 @ 9:59am: Submit project ideas (on canvas only)
-- August 11, 2023 @ 11:59pm: Final Project Report Due (Submit the nb.html file along with link to the github repo)
+- August 11, 2023 @ 11:59pm: Final Project Report Due (Submit the nb.html file on Canvas)
+- August 11, 2023 @ 11:59pm: Final Project Checksheet Due (Submit the nb.html file on Canvas)
 
 More detailed requirements will be announced on Canvas and in class over the next few lectures. The changes will be updated in this document as well.
 
