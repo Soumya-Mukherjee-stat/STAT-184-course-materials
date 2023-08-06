@@ -26,7 +26,7 @@ library(tidyverse)
 
 
 
-## Absolute vs. Realative File Paths 
+## Absolute vs. Relative File Paths 
 
 The goal of a GitHub repo is to be entirely self contained. 
   - **self contained**: everything needed for someone else to reproduce every single thing in your GitHub repo is inside your repo. Nothing in the repo references anything outside of the repo

@@ -15,7 +15,13 @@ You only need to do these steps once.
 
 1. Make an account on github ( You all have already done this! )
 
-2. **ONLY IF YOU ARE NOT SURE THAT Git IS INSTALLED ON YOUR LAPTOP**: On you personal computer/laptop, open RStudio, and follow the instructions in Chapter 6 of Happy Git and GitHub for the useR: https://happygitwithr.com/install-git.html 
+2. Install R from <https://cran.r-project.org/> for your particular Operating System (Windows/MacOs/Linux). Follow the instructions as given by the installer.
+
+3. Install RStudio from <https://posit.co/products/open-source/rstudio/> for your particular Operating System (Windows/MacOs/Linux). Follow the instructions as given by the installer.
+
+2. **ONLY IF YOU ARE NOT SURE WHETHER Git IS INSTALLED ON YOUR LAPTOP**: On you personal computer/laptop, open RStudio, and download git from <https://git-scm.com/download/>.
+
+For the complete instructions, follow the instructions in Chapter 6 of Happy Git and GitHub for the useR: https://happygitwithr.com/install-git.html. 
 
 3. Set up your global git configurations: **In the console** replace with your information (Your First and Last name, and psu email ID):
 
@@ -40,7 +46,7 @@ usethis::create_github_token()
 
   4C. A new browser window will open on GitHub. Select "No expiration date" and make sure all the boxes are checked. At a minimum, select repo, workflow, and user. 
   
-  4D. Click Generate Token. COPY DOWN THIS TOKEN SOMEWHERE SAFE, LIKE NOTEPAD. GITHUB WILL NEVER GIVE IT TO YOU AGAIN. 
+  4D. Click Generate Token. COPY DOWN THIS TOKEN SOMEWHERE SAFE, LIKE NOTEPAD OR MAIL IT TO YOURSELF. GITHUB WILL NEVER GIVE IT TO YOU AGAIN. 
   
 5. Copy and paste the following R command into the R console, and press enter.
 ```{r, eval = F}

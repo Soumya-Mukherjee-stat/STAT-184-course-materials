@@ -15,7 +15,7 @@ output:
 <!-- number_sections: yes -->
 
 
-```{r }
+```{r}
 rm(list = ls())
 knitr::opts_chunk$set(echo = TRUE) 
 
